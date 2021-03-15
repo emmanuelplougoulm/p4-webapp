@@ -1,0 +1,25 @@
+.container {
+  height: 40px;
+  flex-direction: row;
+  align-items: center;
+  border: 1px black solid;
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.3em;
+    height: 100%;
+    .p4 {
+      font-family: "Montserrat";
+      margin: 0.1em 0.5em;
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .collective {
+      font-family: "Lato";
+      margin: 0.1em;
+      font-size: 17.5px;
+      font-weight: 300;
+    }
+  }
+}

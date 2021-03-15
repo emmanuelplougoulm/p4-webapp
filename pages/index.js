@@ -1,65 +1,98 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.scss";
+import React, { useState } from "react";
+import P4Banner from "../components/P4Banner/P4Banner.tsx";
+import { useHistory } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import Image from "next/image";
 
 export default function Home() {
+  const [left, toggleLeft] = useState(false);
+  const [right, toggleRight] = useState(true);
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
+  const history = useHistory();
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>P4-collectif</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+      {/* <div className={styles.container}> */}
+      <P4Banner speed={3} />
+      {!isMobile && (
+        <main className={styles.main}>
+          <div
+            className={styles.left}
+            onClick={() => history.push("/menu")}
+            onMouseEnter={() => {
+              toggleLeft(!left);
+              toggleRight(!right);
+            }}
+            onMouseLeave={() => {
+              toggleLeft(!left);
+              toggleRight(!right);
+            }}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+            {!left ? (
+              <>
+                <div className={styles.montserrat}>
+                  <div className={styles.hoverable}>P4</div>
+                </div>
+                <div className={styles.lato}>
+                  <div className={styles.hoverable}>COLLECTIF</div>
+                </div>
+              </>
+            ) : (
+              <div className={styles.leftImage}>
+                <Image
+                  src="/home-left-hover.png"
+                  width={"100%"}
+                  height={"100%"}
+                  alt=""
+                />
+              </div>
+            )}
+          </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+          <div
+            className={styles.right}
+            onClick={() => history.push("/menu")}
+            onMouseEnter={() => {
+              toggleRight(!right);
+              toggleLeft(!left);
+            }}
+            onMouseLeave={() => {
+              toggleRight(!right);
+              toggleLeft(!left);
+            }}
           >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+            {right ? (
+              <div className={styles.rightImage}></div>
+            ) : (
+              <>
+                <div className={styles.lato}>
+                  <div className={styles.hoverable}>THÉATRE &</div>
+                </div>
+                <div className={styles.montserrat}>
+                  <div className={styles.hoverable}> IMMERSION</div>
+                </div>
+              </>
+            )}
+          </div>
+        </main>
+      )}
+      {isMobile && (
+        <div
+          className={styles["home-mobile"]}
+          onClick={() => history.push("/menu")}
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+          <div className={styles["montserrat-mobile"]}>P4</div>
+          <div className={styles["lato-mobile"]}>COLLECTIF</div>
+        </div>
+      )}
+      <P4Banner speed={6} />
     </div>
-  )
+  );
 }
