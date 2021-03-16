@@ -9,19 +9,20 @@
   justify-content: space-between;
   height: 40px;
   min-height: 40px;
-
-  .link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    background-color: black;
-    color: white;
-    margin-left: 70px;
-    width: 250px;
-    text-decoration: none;
-    font-weight: 500;
-  }
+  // border: 1px black solid;
+}
+.link {
+  border: 1px red solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: black;
+  color: white;
+  margin-left: 70px;
+  width: 250px;
+  text-decoration: none;
+  font-weight: 500;
 }
 .main {
   padding: 0;
