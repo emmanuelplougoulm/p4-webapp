@@ -12,9 +12,9 @@ const Menu = () => {
     <div className={"site-wrapper"}>
       {/* <div className={styles.container}> */}
       <header className={styles.header}>
-        {/* <Link className={styles.link} href="/"> */}
-        Fermer
-        {/* </Link> */}
+        <Link className={styles.link} href="/">
+          Fermer
+        </Link>
       </header>
       <main className={styles.main}>
         <div className={styles["top-section"]}>
