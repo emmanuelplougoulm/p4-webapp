@@ -5,7 +5,7 @@ import P4Banner from "../../components/P4Banner/P4Banner";
 
 const Members = () => {
   return (
-    <div className={styles.menu}>
+    <div className={"site-wrapper"}>
       <div>
         <P4Banner />
         <header className={styles.header}>

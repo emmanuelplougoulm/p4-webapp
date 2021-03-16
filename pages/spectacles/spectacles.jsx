@@ -33,7 +33,7 @@ const Projets = () => {
   // };
 
   return (
-    <div className={styles.container}>
+    <div className={"site-wrapper"}>
       <div>
         <P4Banner speed={7} />
         <header className={styles.header}>

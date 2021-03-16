@@ -9,7 +9,8 @@ import Image from "next/image";
 const Menu = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
   return (
-    <div className={styles.container}>
+    <div className={"site-wrapper"}>
+      {/* <div className={styles.container}> */}
       <header className={styles.header}>
         {/* <Link className={styles.link} href="/"> */}
         Fermer
@@ -36,10 +37,10 @@ const Menu = () => {
             <Link className={styles["nav-item"]} href="/spectacles/spectacles">
               <span>Spectacles</span>
             </Link>
-            <Link className={styles["nav-item"]} href="/news">
+            <Link className={styles["nav-item"]} href="/actus">
               <span>Actualités</span>
             </Link>
-            <Link className={styles["nav-item"]} href="/members">
+            <Link className={styles["nav-item"]} href="membres/membres">
               <span>Membres</span>
             </Link>
             <Link className={styles["nav-item"]} href="/contact">
@@ -52,6 +53,7 @@ const Menu = () => {
         <div className={styles["copyright"]}>@ 2020 - P4 collectif</div>
       </footer>
     </div>
+    // </div>
   );
 };
 

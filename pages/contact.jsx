@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 const Contact = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
   return (
-    <div className={styles.container}>
+    <div className={"site-wrapper"}>
       <P4Banner />
 
       <main className={styles.main}>

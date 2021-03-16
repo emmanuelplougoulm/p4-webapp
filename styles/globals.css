@@ -19,8 +19,13 @@ a {
 @tailwind components;
 @tailwind utilities;
 
-.container {
+.site-wrapper {
   display: flex;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;

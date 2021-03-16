@@ -1,88 +1,79 @@
-.container {
+.header {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  text-align: center;
-  height: 100%;
-  color: black;
-
-  .header {
+  height: 50px;
+  background-color: black;
+  border-bottom: 1px black solid;
+  .link {
     display: flex;
-    justify-content: space-between;
-    height: 50px;
-    background-color: black;
-    border-bottom: 1px black solid;
-    .link {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      font-weight: 700;
-      text-decoration: none;
-      color: black;
-      background-color: white;
-      height: 100%;
-      width: 50%;
-    }
-    .link > div {
-      margin-left: 40px;
-    }
-  }
-
-  .news {
-    display: flex;
-    padding-left: 20px;
-    font-size: 50px;
-    font-family: "Montserrat";
+    justify-content: flex-start;
+    align-items: center;
     font-weight: 700;
-    text-transform: uppercase;
-    padding: 10px 40px 10px;
-  }
-
-  .main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    background-color: white;
     height: 100%;
-    width: 100%;
-    .left {
-      border-top: 1px black solid;
+    width: 50%;
+  }
+  .link > div {
+    margin-left: 40px;
+  }
+}
 
-      width: 40%;
-      font-family: "Montserrat";
-      .post-container {
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        margin-top: 40px;
-        margin-left: 40px;
-        .title {
-          padding-right: 1em;
-          width: 400px;
-          font-size: 25px;
-          font-weight: 700;
-          text-transform: uppercase;
-          margin-bottom: 10px;
-        }
-        .detail {
-          width: 400px;
-          font-size: 15px;
-          font-weight: 300;
-        }
+.news {
+  display: flex;
+  padding-left: 20px;
+  font-size: 50px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 40px 10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  .left {
+    border-top: 1px black solid;
+
+    width: 40%;
+    font-family: "Montserrat";
+    .post-container {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      margin-left: 40px;
+      .title {
+        padding-right: 1em;
+        width: 400px;
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .detail {
+        width: 400px;
+        font-size: 15px;
+        font-weight: 300;
       }
     }
-    .right {
-      // background-image: url("../../Assets/actualites.jpg");
-      background-size: cover;
-      height: 100%;
-      width: 60%;
-    }
   }
-  .footer {
-    margin-top: 200px;
-    padding-left: 900px;
-    border: 1px black solid;
-    display: flex;
+  .right {
+    // background-image: url("../../Assets/actualites.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 60%;
   }
+}
+.footer {
+  margin-top: 200px;
+  padding-left: 900px;
+  border: 1px black solid;
+  display: flex;
 }
 
 @media only screen and (max-width: 600px) {
