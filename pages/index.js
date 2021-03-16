@@ -14,7 +14,7 @@ export default function Home() {
   const history = useHistory();
 
   return (
-    <div className={styles.container}>
+    <div className={"container"}>
       <Head>
         <title>P4-collectif</title>
         <link rel="icon" href="/favicon.ico" />
