@@ -23,65 +23,65 @@ export default function Home() {
       <P4Banner speed={3} />
       {!isMobile && (
         <main className={styles.main}>
-          <Link href="/menu">
-            <div
-              className={styles.left}
-              onMouseEnter={() => {
-                toggleLeft(!left);
-                toggleRight(!right);
-              }}
-              onMouseLeave={() => {
-                toggleLeft(!left);
-                toggleRight(!right);
-              }}
-            >
-              {!left ? (
-                <>
-                  <div className={styles.montserrat}>
-                    <div className={styles.hoverable}>P4</div>
-                  </div>
-                  <div className={styles.lato}>
-                    <div className={styles.hoverable}>COLLECTIF</div>
-                  </div>
-                </>
-              ) : (
-                <div className={styles.leftImage}>
-                  <Image
-                    src="/home-left-hover.png"
-                    width={"100%"}
-                    height={"100%"}
-                    alt=""
-                  />
+          {/* <Link href="/menu"> */}
+          <div
+            className={styles.left}
+            onMouseEnter={() => {
+              toggleLeft(!left);
+              toggleRight(!right);
+            }}
+            onMouseLeave={() => {
+              toggleLeft(!left);
+              toggleRight(!right);
+            }}
+          >
+            {!left ? (
+              <>
+                <div className={styles.montserrat}>
+                  <div className={styles.hoverable}>P4</div>
                 </div>
-              )}
-            </div>
+                <div className={styles.lato}>
+                  <div className={styles.hoverable}>COLLECTIF</div>
+                </div>
+              </>
+            ) : (
+              <div className={styles.leftImage}>
+                <Image
+                  src="/home-left-hover.png"
+                  width={"100%"}
+                  height={"100%"}
+                  alt=""
+                />
+              </div>
+            )}
+          </div>
 
-            <div
-              className={styles.right}
-              onClick={() => history.push("/menu")}
-              onMouseEnter={() => {
-                toggleRight(!right);
-                toggleLeft(!left);
-              }}
-              onMouseLeave={() => {
-                toggleRight(!right);
-                toggleLeft(!left);
-              }}
-            >
-              {right ? (
-                <div className={styles.rightImage}></div>
-              ) : (
-                <>
-                  <div className={styles.lato}>
-                    <div className={styles.hoverable}>THÉATRE &</div>
-                  </div>
-                  <div className={styles.montserrat}>
-                    <div className={styles.hoverable}> IMMERSION</div>
-                  </div>
-                </>
-              )}
-            </div>
-          </Link>
+          <div
+            className={styles.right}
+            onClick={() => history.push("/menu")}
+            onMouseEnter={() => {
+              toggleRight(!right);
+              toggleLeft(!left);
+            }}
+            onMouseLeave={() => {
+              toggleRight(!right);
+              toggleLeft(!left);
+            }}
+          >
+            {right ? (
+              <div className={styles.rightImage}></div>
+            ) : (
+              <>
+                <div className={styles.lato}>
+                  <div className={styles.hoverable}>THÉATRE &</div>
+                </div>
+                <div className={styles.montserrat}>
+                  <div className={styles.hoverable}> IMMERSION</div>
+                </div>
+              </>
+            )}
+          </div>
+          {/* </Link> */}
         </main>
       )}
       {isMobile && (

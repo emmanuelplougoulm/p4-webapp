@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/manifeste.module.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import P4Banner from "../components/P4Banner/P4Banner";
 import ManifesteBanner from "../components/ManifesteBanner/manifesteBanner.jsx";
 import { useMediaQuery } from "react-responsive";

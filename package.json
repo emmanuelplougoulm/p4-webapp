@@ -14,5 +14,10 @@
     "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
     "react-ticker": "^1.2.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "tailwindcss": "^2.0.3"
   }
 }

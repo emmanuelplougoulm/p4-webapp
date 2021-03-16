@@ -1,0 +1,48 @@
+import React from "react";
+import styles from "../styles/actus.module.scss";
+import Link from "next/link";
+import P4Banner from "../components/P4Banner/P4Banner";
+
+const Actus = () => {
+  return (
+    <div className={styles.container}>
+      <div>
+        <P4Banner />
+        <header className={styles.header}>
+          {/* <Link className={styles.link} to="/menu"> */}
+          <div>{"< "}MENU</div>
+          {/* </Link> */}
+        </header>
+        <div className={styles.news}>Actualités</div>
+      </div>
+
+      <main className={styles.main}>
+        <div className={styles.left}>
+          <div className={styles["post-container"]}>
+            <div className={styles["title"]}>
+              Nouveau spectacle IMMERSIF – Résidence de création
+            </div>
+            <div className={styles["detail"]}>
+              Couvent Levat/Ateliers JUXTAPOZ – Marseille
+              <br />
+              Avril, Mai 2021
+            </div>
+          </div>
+          <div className={styles["post-container"]}>
+            <div className={styles["title"]}>
+              J’aurais voulu être Jeff Bezos
+            </div>
+            <div className={styles["detail"]}>
+              Concours Jeunes metteurs en scène Théâtre 13 <br /> 2021
+            </div>
+          </div>
+        </div>
+        <div className={styles.right}></div>
+      </main>
+
+      <P4Banner />
+    </div>
+  );
+};
+
+export default Actus;
