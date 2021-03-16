@@ -9,9 +9,9 @@ const Members = () => {
       <div>
         <P4Banner />
         <header className={styles.header}>
-          {/* <Link className={styles.link} to="/menu"> */}
-          <div>{"< "}MENU</div>
-          {/* </Link> */}
+          <Link className={styles.link} href="/menu">
+            {"< MENU"}
+          </Link>
         </header>
       </div>
       <main className={styles.main}>

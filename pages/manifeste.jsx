@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/manifeste.module.scss";
-
+import Link from "next/link";
 import P4Banner from "../components/P4Banner/P4Banner";
 import ManifesteBanner from "../components/ManifesteBanner/manifesteBanner.jsx";
 import { useMediaQuery } from "react-responsive";
@@ -13,9 +13,9 @@ const Manifeste = () => {
       <div>
         <P4Banner />
         <header className={styles.header}>
-          {/* <Link className={styles.link} to="/menu"> */}
-          {"<"} MENU
-          {/* </Link> */}
+          <Link className={styles.link} href="/menu">
+            {"< MENU"}
+          </Link>
         </header>
       </div>
       <section className={styles.section}>
@@ -60,7 +60,7 @@ const Manifeste = () => {
             Pour ses créations <strong>IN SITU</strong> et{" "}
             <strong> IMMERSIVES</strong>, le <strong>Collectif P4</strong> se
             rassemble lors de temps courts et intenses pour jouer rapidement sur
-            les lieux qui l’acceuillent.
+            les lieux qui l’accueillent.
           </div>
         </div>
       </section>
