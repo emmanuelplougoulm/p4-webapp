@@ -31,3 +31,54 @@ a {
   min-height: 100vh;
   overflow: hidden;
 }
+
+.header {
+  display: flex;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  justify-content: space-between;
+  min-height: 40px;
+}
+
+.header-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: black;
+  color: white;
+  margin-left: 70px;
+  width: 250px;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.backlink-ctn {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  flex: 0;
+  border-bottom: 1px black solid;
+}
+.backlink {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.section-title {
+  display: flex;
+  padding-left: 20px;
+  font-size: 50px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 40px 10px;
+}
+
+.hoverable {
+  visibility: visible;
+}
