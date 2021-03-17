@@ -79,6 +79,7 @@ export default function Home() {
           </div>
         </main>
       )}
+      {/* MOBILE PART */}
       {isMobile && (
         <Link href="/menu">
           <div className={styles["home-mobile"]}>
