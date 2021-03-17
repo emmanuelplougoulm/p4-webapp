@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/spectacles.module.scss";
-// import { Link } from "react-router-dom";
 import P4Banner from "../../components/P4Banner/P4Banner";
 import ProjectsBanner from "../../components/ProjectBanner/ProjectBanner";
 import { useHistory } from "react-router-dom";
+import Link from "next/link";
+
 // import bezosBg from "../../Assets/bezos.png";
 // import insoutenableBg from "../../Assets/insoutenables.png";
 // import tailBg from "../../Assets/tail.jpg";
 // import masoeurBg from "../../Assets/masoeur.png";
 
-const Projets = () => {
+const Spectacles = () => {
   const history = useHistory();
   const [background, setBackground] = useState("bg-bezos");
   const [isBezos, setBezos] = useState(false);
@@ -36,15 +37,15 @@ const Projets = () => {
     <div className={"site-wrapper"}>
       <div>
         <P4Banner speed={7} />
-        <header className={styles.header}>
-          {/* <Link className={styles.link} to="/menu"> */}
-          <div>{"< "}MENU</div>
-          {/* </Link> */}
-        </header>
-        <div className={styles.projects}>Spectacles</div>
+        <div className="backlink-ctn">
+          <Link href="/menu">
+            <a className="backlink">{"< MENU"}</a>
+          </Link>
+        </div>
+        <div className="section-title">Spectacles</div>
       </div>
-      {/* <div className={styles.main}> */}
-      <section className={styles.section}>
+
+      <main className={styles.main}>
         <div className={styles.left}>
           <div className={styles["project-container"]}>
             <div
@@ -52,9 +53,9 @@ const Projets = () => {
               onMouseEnter={() => setBezos(true)}
               onMouseLeave={() => setBezos(false)}
             >
-              {/* <Link className={styles.link} to="/bezos"> */}
-              J'aurais voulu être Jeff Bezos
-              {/* </Link> */}
+              <Link href="/bezos">
+                <a className={styles.link}>J'aurais voulu être Jeff Bezos</a>
+              </Link>
             </div>
           </div>
           <div className={styles["project-container"]}>
@@ -63,12 +64,10 @@ const Projets = () => {
               onMouseEnter={() => setInsoutenable(true)}
               onMouseLeave={() => setInsoutenable(false)}
             >
-              {/* <Link className={styles.link} to="/insoutenables"> */}
-              <div className={styles.puce}> </div>Insoutenables longues
-              étreintes
-              {/* </Link> */}
+              <Link href="/insoutenables">
+                <a className={styles.link}>Insoutenables longues étreintes </a>
+              </Link>
             </div>
-            <div className={styles["detail"]}></div>
           </div>
           <div
             className={styles["project-container"]}
@@ -76,11 +75,12 @@ const Projets = () => {
             onMouseLeave={() => setTail(false)}
           >
             <div className={styles["title"]}>
-              {/* <Link className={styles.link} to="/tail"> */}
-              Seule la queue du castor peut tarir la rivière
-              {/* </Link> */}
+              <Link href="/tail">
+                <a className={styles.link}>
+                  Seule la queue du castor peut tarir la rivière
+                </a>
+              </Link>
             </div>
-            <div className={styles["detail"]}></div>
           </div>
           <div
             className={styles["project-container"]}
@@ -91,11 +91,12 @@ const Projets = () => {
               className={styles["title"]}
               onClick={() => history.push("/masoeur")}
             >
-              {/* <Link className={styles.link} to="/masoeur"> */}
-              Ma soeur, tes lèvres sont de porcelaine
-              {/* </Link> */}
+              <Link href="/masoeur">
+                <a className={styles.link}>
+                  Ma soeur, tes lèvres sont de porcelaine
+                </a>
+              </Link>
             </div>
-            <div className={styles["detail"]}></div>
           </div>
         </div>
         <div className={styles["bg-container"]}>
@@ -104,14 +105,10 @@ const Projets = () => {
             alt="-"
           /> */}
         </div>
-      </section>
-      {/* </div> */}
-      <div>
-        <ProjectsBanner />
-        <P4Banner />
-      </div>
+      </main>
+      <P4Banner />
     </div>
   );
 };
 
-export default Projets;
+export default Spectacles;
