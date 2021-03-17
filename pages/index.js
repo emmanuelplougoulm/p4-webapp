@@ -23,76 +23,69 @@ export default function Home() {
       <P4Banner speed={3} />
       {!isMobile && (
         <main className={styles.main}>
-          <Link href="/menu">
-            <div
-              className={styles.left}
-              onMouseEnter={() => {
-                toggleLeft(!left);
-                toggleRight(!right);
-              }}
-              onMouseLeave={() => {
-                toggleLeft(!left);
-                toggleRight(!right);
-              }}
-            >
-              {!left ? (
+          <div
+            className={styles.left}
+            onMouseEnter={() => {
+              toggleLeft(!left);
+              toggleRight(!right);
+            }}
+            onMouseLeave={() => {
+              toggleLeft(!left);
+              toggleRight(!right);
+            }}
+          >
+            {/* LEFT PART */}
+            {!left ? (
+              <Link href="/menu">
                 <div>
-                  <div className={styles.montserrat}>
-                    <div className={styles.hoverable}>P4</div>
+                  <div className={styles["montserrat-home"]}>
+                    <div className="hoverable">P4</div>
                   </div>
-                  <div className={styles.lato}>
-                    <div className={styles.hoverable}>COLLECTIF</div>
+                  <div className={styles["lato-home"]}>
+                    <div className="hoverable">COLLECTIF</div>
                   </div>
                 </div>
-              ) : (
+              </Link>
+            ) : (
+              <Link href="/menu">
                 <div className={styles.leftImage}>
                   <Image
-                    src="/home-left-hover.png"
-                    width={"50%"}
-                    height={"100%"}
-                    alt=""
+                    src="/images/home-left.png"
+                    layout="fill"
+                    alt="left-img"
                   />
                 </div>
-              )}
-            </div>
-          </Link>
-
-          <Link href="/menu">
-            <div
-              className={styles.right}
-              onMouseEnter={() => {
-                toggleRight(!right);
-                toggleLeft(!left);
-              }}
-              onMouseLeave={() => {
-                toggleRight(!right);
-                toggleLeft(!left);
-              }}
-            >
-              {right ? (
-                <div className={styles.rightImage}></div>
-              ) : (
-                <>
-                  <div className={styles.lato}>
-                    <div className={styles.hoverable}>THÉATRE &</div>
-                  </div>
-                  <div className={styles.montserrat}>
-                    <div className={styles.hoverable}> IMMERSION</div>
-                  </div>
-                </>
-              )}
-            </div>
-          </Link>
+              </Link>
+            )}
+          </div>
+          {/* RIGHT PART */}
+          <div className={styles.right}>
+            {right ? (
+              <Link href="/menu">
+                <div>
+                  <Image src="/images/home-right.png" layout="fill" alt="" />
+                </div>
+              </Link>
+            ) : (
+              <>
+                <div className={styles["lato-home"]}>
+                  <div className={styles.hoverable}>THÉATRE &</div>
+                </div>
+                <div className={styles["montserrat-home"]}>
+                  <div className={styles.hoverable}> IMMERSION</div>
+                </div>
+              </>
+            )}
+          </div>
         </main>
       )}
       {isMobile && (
-        <div
-          className={styles["home-mobile"]}
-          onClick={() => history.push("/menu")}
-        >
-          <div className={styles["montserrat-mobile"]}>P4</div>
-          <div className={styles["lato-mobile"]}>COLLECTIF</div>
-        </div>
+        <Link href="/menu">
+          <div className={styles["home-mobile"]}>
+            <div className={styles["montserrat-mobile"]}>P4</div>
+            <div className={styles["lato-mobile"]}>COLLECTIF</div>
+          </div>
+        </Link>
       )}
       <P4Banner speed={6} />
     </div>
