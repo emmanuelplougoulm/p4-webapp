@@ -8,11 +8,11 @@ const Members = () => {
     <div className={"site-wrapper"}>
       <div>
         <P4Banner />
-        <header className={styles.header}>
-          <Link className={styles.link} href="/menu">
-            {"< MENU"}
+        <div className="backlink-ctn">
+          <Link href="/menu">
+            <a className="backlink">{"< MENU"}</a>
           </Link>
-        </header>
+        </div>
       </div>
       <main className={styles.main}>
         <div className={styles.title}>Membres : </div>
