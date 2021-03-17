@@ -8,12 +8,12 @@ const Actus = () => {
     <div className={"site-wrapper"}>
       <div>
         <P4Banner />
-        <header className={styles.header}>
-          {/* <Link className={styles.link} to="/menu"> */}
-          <div>{"< "}MENU</div>
-          {/* </Link> */}
-        </header>
-        <div className={styles.news}>Actualités</div>
+        <div className="backlink-ctn">
+          <Link href="/menu">
+            <a className="backlink">{"< MENU"}</a>
+          </Link>
+        </div>
+        <div className="section-title">Actualités</div>
       </div>
 
       <main className={styles.main}>
