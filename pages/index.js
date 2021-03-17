@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/home.module.scss";
 import React, { useState } from "react";
 import P4Banner from "../components/P4Banner/P4Banner.jsx";
 import { useHistory } from "react-router-dom";
@@ -23,7 +23,6 @@ export default function Home() {
       <P4Banner speed={3} />
       {!isMobile && (
         <main className={styles.main}>
-          {/* <Link href="/menu"> */}
           <div
             className={styles.left}
             onMouseEnter={() => {
@@ -35,63 +34,59 @@ export default function Home() {
               toggleRight(!right);
             }}
           >
+            {/* LEFT PART */}
             {!left ? (
-              <>
-                <div className={styles.montserrat}>
-                  <div className={styles.hoverable}>P4</div>
+              <Link href="/menu">
+                <div>
+                  <div className={styles["montserrat-home"]}>
+                    <div className="hoverable">P4</div>
+                  </div>
+                  <div className={styles["lato-home"]}>
+                    <div className="hoverable">COLLECTIF</div>
+                  </div>
                 </div>
-                <div className={styles.lato}>
-                  <div className={styles.hoverable}>COLLECTIF</div>
-                </div>
-              </>
+              </Link>
             ) : (
-              <div className={styles.leftImage}>
-                <Image
-                  src="/home-left-hover.png"
-                  width={"100%"}
-                  height={"100%"}
-                  alt=""
-                />
-              </div>
+              <Link href="/menu">
+                <div className={styles.leftImage}>
+                  <Image
+                    src="/images/home-left.png"
+                    layout="fill"
+                    alt="left-img"
+                  />
+                </div>
+              </Link>
             )}
           </div>
-
-          <div
-            className={styles.right}
-            onClick={() => history.push("/menu")}
-            onMouseEnter={() => {
-              toggleRight(!right);
-              toggleLeft(!left);
-            }}
-            onMouseLeave={() => {
-              toggleRight(!right);
-              toggleLeft(!left);
-            }}
-          >
+          {/* RIGHT PART */}
+          <div className={styles.right}>
             {right ? (
-              <div className={styles.rightImage}></div>
+              <Link href="/menu">
+                <div>
+                  <Image src="/images/home-right.png" layout="fill" alt="" />
+                </div>
+              </Link>
             ) : (
               <>
-                <div className={styles.lato}>
+                <div className={styles["lato-home"]}>
                   <div className={styles.hoverable}>THÉATRE &</div>
                 </div>
-                <div className={styles.montserrat}>
+                <div className={styles["montserrat-home"]}>
                   <div className={styles.hoverable}> IMMERSION</div>
                 </div>
               </>
             )}
           </div>
-          {/* </Link> */}
         </main>
       )}
+      {/* MOBILE PART */}
       {isMobile && (
-        <div
-          className={styles["home-mobile"]}
-          onClick={() => history.push("/menu")}
-        >
-          <div className={styles["montserrat-mobile"]}>P4</div>
-          <div className={styles["lato-mobile"]}>COLLECTIF</div>
-        </div>
+        <Link href="/menu">
+          <div className={styles["home-mobile"]}>
+            <div className={styles["montserrat-mobile"]}>P4</div>
+            <div className={styles["lato-mobile"]}>COLLECTIF</div>
+          </div>
+        </Link>
       )}
       <P4Banner speed={6} />
     </div>

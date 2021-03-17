@@ -9,16 +9,16 @@ const Manifeste = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
   return (
-    <div className={"site-wrapper"}>
+    <div className="site-wrapper">
       <div>
         <P4Banner />
-        <header className={styles.header}>
-          <Link className={styles.link} href="/menu">
-            {"< MENU"}
+        <div className="backlink-ctn">
+          <Link href="/menu">
+            <a className="backlink">{"< MENU"}</a>
           </Link>
-        </header>
+        </div>
       </div>
-      <section className={styles.section}>
+      <main className={styles.section}>
         {!isMobile && (
           <div className={styles.left}>
             <ManifesteBanner />
@@ -63,7 +63,7 @@ const Manifeste = () => {
             les lieux qui l’accueillent.
           </div>
         </div>
-      </section>
+      </main>
       <P4Banner />
     </div>
   );
