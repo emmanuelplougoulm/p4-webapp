@@ -8,7 +8,6 @@ const Contact = () => {
   return (
     <div className={"site-wrapper"}>
       <P4Banner />
-
       <main className={styles.main}>
         {!isMobile && (
           <>
