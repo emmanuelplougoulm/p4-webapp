@@ -9,14 +9,14 @@ import Image from "next/image";
 const Menu = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
   return (
-    <div className={"site-wrapper"}>
-      <header className={styles.header}>
-        <Link className={styles.link} href="/">
-          Fermer
+    <div className="site-wrapper">
+      <header className="header">
+        <Link href="/">
+          <a className="header-link">Fermer</a>
         </Link>
       </header>
       <main className={styles.main}>
-        <div className={styles["top-section"]}>
+        <div className={styles["upper-section"]}>
           <P4Banner />
           <h1 className={styles.h1}>
             <div className={styles.montserrat}>P4 </div>
@@ -30,20 +30,20 @@ const Menu = () => {
             <Image src="/entrance.png" width={"100%"} height={"100%"} alt="" />
           </div>
           <div className={styles["nav-wrapper"]}>
-            <Link className={styles["nav-item"]} href="/manifeste">
-              <span>Manifeste</span>
+            <Link href="/manifeste">
+              <a className={styles["nav-item"]}>Manifeste</a>
             </Link>
-            <Link className={styles["nav-item"]} href="/spectacles/spectacles">
-              <span>Spectacles</span>
+            <Link href="/spectacles/spectacles">
+              <a className={styles["nav-item"]}>Spectacles</a>
             </Link>
-            <Link className={styles["nav-item"]} href="/actus">
-              <span>Actualités</span>
+            <Link href="/actus">
+              <a className={styles["nav-item"]}>Actualités</a>
             </Link>
-            <Link className={styles["nav-item"]} href="membres/membres">
-              <span>Membres</span>
+            <Link href="membres/membres">
+              <a className={styles["nav-item"]}>Membres</a>
             </Link>
-            <Link className={styles["nav-item"]} href="/contact">
-              <span>Contact</span>
+            <Link href="/contact">
+              <a className={styles["nav-item"]}>Contact</a>
             </Link>
           </div>
         </section>
@@ -52,7 +52,6 @@ const Menu = () => {
         <div className={styles["copyright"]}>@ 2020 - P4 collectif</div>
       </footer>
     </div>
-    // </div>
   );
 };
 
