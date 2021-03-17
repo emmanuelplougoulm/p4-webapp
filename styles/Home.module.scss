@@ -1,20 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap");
 
-// .container {
-//   color: black;
-//   display: flex;
-//   display: -webkit-flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   min-height: 100vh;
-
 .main {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
   -webkit-flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-grow: 1;
+  position: relative;
 
   .left {
     display: flex;
@@ -24,26 +17,7 @@
     align-items: center;
     object-fit: cover;
     width: 50%;
-    .montserrat {
-      font-family: "Montserrat";
-      font-weight: 700;
-      font-size: 100px;
-      .hoverable {
-        visibility: visible;
-      }
-    }
-    .lato {
-      font-family: "Lato";
-      font-weight: 300;
-      font-size: 90px;
-    }
-  }
-
-  .leftImage {
-    background-image: url("/public/home-left-hover.png");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    position: relative;
   }
 
   .right {
@@ -52,8 +26,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // -webkit-flex-grow: 1;
     width: 50%;
+    position: relative;
+
     .montserrat {
       font-family: "Montserrat";
       font-weight: 700;
@@ -65,13 +40,20 @@
       font-size: 90px;
     }
   }
-  .rightImage {
-    background-image: url("/public/home.png");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-  }
 }
+
+.montserrat-home {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 100px;
+}
+
+.lato-home {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 90px;
+}
+
 .home-mobile {
   flex-grow: 1;
   -webkit-flex-grow: 1;
@@ -95,4 +77,3 @@
     font-size: 50px;
   }
 }
-// }
