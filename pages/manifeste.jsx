@@ -13,7 +13,7 @@ const Manifeste = () => {
       <div>
         <P4Banner />
         <div className="backlink-ctn">
-          <Link className={styles.link} href="/menu">
+          <Link href="/menu">
             <a className="backlink">{"< MENU"}</a>
           </Link>
         </div>
