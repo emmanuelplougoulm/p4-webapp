@@ -37,7 +37,7 @@ export default function Home() {
             {/* LEFT PART */}
             {!left ? (
               <Link href="/menu">
-                <div>
+                <div style={{ textAlign: "center" }}>
                   <div className={styles["montserrat-home"]}>
                     <div className="hoverable">P4</div>
                   </div>
@@ -67,14 +67,16 @@ export default function Home() {
                 </div>
               </Link>
             ) : (
-              <>
-                <div className={styles["lato-home"]}>
-                  <div className={styles.hoverable}>THÉATRE &</div>
+              <Link href="/menu">
+                <div style={{ textAlign: "center" }}>
+                  <div className={styles["lato-home"]}>
+                    <div className={styles.hoverable}>THÉATRE &</div>
+                  </div>
+                  <div className={styles["montserrat-home"]}>
+                    <div className={styles.hoverable}> IMMERSION</div>
+                  </div>
                 </div>
-                <div className={styles["montserrat-home"]}>
-                  <div className={styles.hoverable}> IMMERSION</div>
-                </div>
-              </>
+              </Link>
             )}
           </div>
         </main>

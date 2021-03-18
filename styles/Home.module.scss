@@ -15,7 +15,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    object-fit: cover;
     width: 50%;
     position: relative;
   }
@@ -28,18 +27,13 @@
     align-items: center;
     width: 50%;
     position: relative;
-
-    .montserrat {
-      font-family: "Montserrat";
-      font-weight: 700;
-      font-size: 100px;
-    }
-    .lato {
-      font-family: "Lato";
-      font-weight: 300;
-      font-size: 90px;
-    }
   }
+}
+
+.justify-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .montserrat-home {
@@ -52,6 +46,30 @@
   font-family: "Lato";
   font-weight: 300;
   font-size: 90px;
+}
+
+.home-mobile {
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  display: flex;
+  -webkit-flex-display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+
+  .montserrat-mobile {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 100px;
+  }
+  .lato-mobile {
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 50px;
+  }
 }
 
 .home-mobile {
