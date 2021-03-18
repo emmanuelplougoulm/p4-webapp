@@ -29,9 +29,8 @@
     }
   }
   .right {
-    background-size: cover;
-    height: 100%;
-    width: 60%;
+    position: relative;
+    flex-grow: 1;
   }
 }
 .footer {

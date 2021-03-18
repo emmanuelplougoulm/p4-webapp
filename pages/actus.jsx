@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/actus.module.scss";
 import Link from "next/link";
 import P4Banner from "../components/P4Banner/P4Banner";
+import Image from "next/image";
 
 const Actus = () => {
   return (
@@ -37,7 +38,9 @@ const Actus = () => {
             </div>
           </div>
         </div>
-        <div className={styles.right}></div>
+        <div className={styles.right}>
+          <Image src="/images/actualites.jpg" layout="fill" />
+        </div>
       </main>
 
       <P4Banner />
