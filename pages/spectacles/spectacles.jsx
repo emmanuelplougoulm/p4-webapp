@@ -4,34 +4,21 @@ import P4Banner from "../../components/P4Banner/P4Banner";
 import ProjectsBanner from "../../components/ProjectBanner/ProjectBanner";
 import { useHistory } from "react-router-dom";
 import Link from "next/link";
-
-// import bezosBg from "../../Assets/bezos.png";
-// import insoutenableBg from "../../Assets/insoutenables.png";
-// import tailBg from "../../Assets/tail.jpg";
-// import masoeurBg from "../../Assets/masoeur.png";
+import Image from "next/image";
 
 const Spectacles = () => {
   const history = useHistory();
-  const [background, setBackground] = useState("bg-bezos");
-  const [isBezos, setBezos] = useState(false);
-  const [isInsoutenable, setInsoutenable] = useState(false);
-  const [isTail, setTail] = useState(false);
-  const [isSister, setSister] = useState(false);
+  const [background, setBackground] = useState("/images/bezos.png");
 
   useEffect(() => {
-    if (isBezos) setBackground("bg-bezos");
-    if (isInsoutenable) setBackground("bg-insoutenables");
-    if (isTail) setBackground("bg-tail");
-    if (isSister) setBackground("bg-sister");
-  }, [isBezos, isInsoutenable, isTail, isSister]);
-
-  // const findImage = (isBezos, isInsoutenable, isTail, isSister) => {
-  //   if (isBezos) return bezosBg;
-  //   if (isInsoutenable) return insoutenableBg;
-  //   if (isTail) return tailBg;
-  //   if (isSister) return masoeurBg;
-  //   else return bezosBg;
-  // };
+    const findImage = (background) => {
+      if ((background = "bezos")) return "/images/bezos.png";
+      if ((background = "insoutenable")) return "/images/insoutenables.png";
+      if ((background = "tail")) return "/images/tail.png";
+      if ((background = "sister")) return "/images/masoeur.png";
+      else return "/images/bezos.png";
+    };
+  }, [background]);
 
   return (
     <div className={"site-wrapper"}>
@@ -50,8 +37,7 @@ const Spectacles = () => {
           <div className={styles["project-container"]}>
             <div
               className={styles["title"]}
-              onMouseEnter={() => setBezos(true)}
-              onMouseLeave={() => setBezos(false)}
+              onMouseEnter={() => setBackground("/images/bezos.png")}
             >
               <Link href="/bezos">
                 <a className={styles.link}>J'aurais voulu être Jeff Bezos</a>
@@ -61,8 +47,7 @@ const Spectacles = () => {
           <div className={styles["project-container"]}>
             <div
               className={styles["title"]}
-              onMouseEnter={() => setInsoutenable(true)}
-              onMouseLeave={() => setInsoutenable(false)}
+              onMouseEnter={() => setBackground("/images/insoutenables.png")}
             >
               <Link href="/insoutenables">
                 <a className={styles.link}>Insoutenables longues étreintes </a>
@@ -71,8 +56,7 @@ const Spectacles = () => {
           </div>
           <div
             className={styles["project-container"]}
-            onMouseEnter={() => setTail(true)}
-            onMouseLeave={() => setTail(false)}
+            onMouseEnter={() => setBackground("/images/tail.png")}
           >
             <div className={styles["title"]}>
               <Link href="/tail">
@@ -84,13 +68,9 @@ const Spectacles = () => {
           </div>
           <div
             className={styles["project-container"]}
-            onMouseEnter={() => setSister(true)}
-            onMouseLeave={() => setSister(false)}
+            onMouseEnter={() => setBackground("/images/masoeur.png")}
           >
-            <div
-              className={styles["title"]}
-              onClick={() => history.push("/masoeur")}
-            >
+            <div className={styles["title"]}>
               <Link href="/masoeur">
                 <a className={styles.link}>
                   Ma soeur, tes lèvres sont de porcelaine
@@ -100,10 +80,7 @@ const Spectacles = () => {
           </div>
         </div>
         <div className={styles["bg-container"]}>
-          {/* <img
-            src={findImage(isBezos, isInsoutenable, isTail, isSister)}
-            alt="-"
-          /> */}
+          <Image src={background} layout="fill" alt="-" />
         </div>
       </main>
       <P4Banner />
