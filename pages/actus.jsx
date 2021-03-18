@@ -42,7 +42,6 @@ const Actus = () => {
           <Image src="/images/actualites.jpg" layout="fill" />
         </div>
       </main>
-
       <P4Banner />
     </div>
   );

@@ -77,6 +77,7 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   padding: 10px 40px 10px;
+  border-bottom: 1px black solid;
 }
 
 .hoverable {
@@ -87,5 +88,6 @@ a {
   .section-title {
     padding: 10px 20px 10px;
     font-size: 20px;
+    border-bottom: 1px black solid;
   }
 }

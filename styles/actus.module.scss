@@ -4,7 +4,6 @@
   flex-direction: row;
   justify-content: space-between;
   .left {
-    border-top: 1px black solid;
     width: 40%;
     font-family: "Montserrat";
     .post-container {
@@ -41,39 +40,31 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .container {
-    .header {
-      background-color: white;
-      .link > div {
-        margin-left: 20px;
-      }
-    }
-    .news {
-      font-size: 20px;
-      padding: 10px 20px 10px;
-    }
-    .main {
-      .left {
-        width: 100%;
-        border-top: none;
-        .post-container {
-          margin-left: 15px;
-          .title {
-            font-size: 18px;
-          }
-          .detail {
-            padding-right: 10px;
-            max-width: 250px;
-            font-size: 14px;
-          }
+  .news {
+    font-size: 20px;
+    padding: 10px 20px 10px;
+  }
+  .main {
+    .left {
+      width: 100%;
+      border-top: none;
+      .post-container {
+        margin-left: 15px;
+        .title {
+          font-size: 18px;
+        }
+        .detail {
+          padding-right: 10px;
+          max-width: 250px;
+          font-size: 14px;
         }
       }
-      .right {
-        display: none;
-      }
     }
-    .news {
-      border-bottom: 1px black solid !important;
+    .right {
+      display: none;
     }
+  }
+  .news {
+    border-bottom: 1px black solid !important;
   }
 }
