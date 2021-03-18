@@ -110,80 +110,76 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .container {
-    .header {
-      display: none;
-    }
-    .main {
-      flex-grow: 1;
-      padding: 0;
-      .top-section {
-        display: flex;
-        flex-direction: column;
-        height: 50%;
-        .h1 {
-          padding: 1em;
-
-          flex-direction: column;
-          margin: 0;
-          text-transform: uppercase;
-          .montserrat {
-            text-align: center;
-            align-self: center;
-            padding: 0;
-            margin: 0;
-            line-height: 90px;
-            font-size: 90px;
-            font-weight: 700;
-          }
-          .lato {
-            font-size: 50px;
-            font-family: "Lato";
-            font-weight: 300;
-          }
-        }
-        .h2 {
-          text-align: left;
-          margin: 0;
-          font-family: "Montserrat";
-          font-weight: 100;
-          font-size: 2em;
-          border-bottom: 1px black solid;
-        }
-      }
-      .section {
-        // border: 1px green solid;
-        display: flex;
-        justify-content: center;
+  .main {
+    flex-grow: 1;
+    padding: 0;
+    .upper-section {
+      display: flex;
+      flex-direction: column;
+      height: 50%;
+      .h1 {
         padding: 1em;
 
-        .img-container {
-          display: none;
-        }
-        .nav-wrapper {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
+        flex-direction: column;
+        margin: 0;
+        text-transform: uppercase;
+        .montserrat {
+          text-align: center;
+          align-self: center;
           padding: 0;
-          .nav-item {
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-            font-size: 1.2em;
-            margin-bottom: 0.5em;
-          }
+          margin: 0;
+          line-height: 90px;
+          font-size: 90px;
+          font-weight: 700;
+        }
+        .lato {
+          font-size: 50px;
+          font-family: "Lato";
+          font-weight: 300;
         }
       }
+      .h2 {
+        text-align: left;
+        margin: 0;
+        font-family: "Montserrat";
+        font-weight: 100;
+        font-size: 2em;
+        border-bottom: 1px black solid;
+      }
     }
-    .footer {
-      padding-left: 0;
-      height: 40px;
-      .copyright {
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        padding-left: 10px;
+    .section {
+      // border: 1px green solid;
+      display: flex;
+      justify-content: center;
+      padding: 1em;
+
+      .img-container {
+        display: none;
+      }
+      .nav-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0;
+        .nav-item {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+          font-size: 1.2em;
+          margin-bottom: 0.5em;
+        }
       }
     }
   }
+  .footer {
+    padding-left: 0;
+    height: 40px;
+    .copyright {
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      padding-left: 10px;
+    }
+  }
 }
+// }

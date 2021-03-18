@@ -10,11 +10,13 @@ const Menu = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
   return (
     <div className="site-wrapper">
-      <header className="header">
-        <Link href="/">
-          <a className="header-link">Fermer</a>
-        </Link>
-      </header>
+      {!isMobile && (
+        <header className="header">
+          <Link href="/">
+            <a className="header-link">Fermer</a>
+          </Link>
+        </header>
+      )}
       <main className={styles.main}>
         <div className={styles["upper-section"]}>
           <P4Banner />
