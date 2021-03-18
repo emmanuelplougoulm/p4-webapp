@@ -27,7 +27,7 @@ const Menu = () => {
         </div>
         <section className={styles["section"]}>
           <div className={styles["img-container"]}>
-            <Image src="/entrance.png" width={"100%"} height={"100%"} alt="" />
+            <Image src="/images/entrance.jpg" layout="fill" alt="" />
           </div>
           <div className={styles["nav-wrapper"]}>
             <Link href="/manifeste">
