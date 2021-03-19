@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/actus.module.scss";
 import Link from "next/link";
 import P4Banner from "../components/P4Banner/P4Banner";
 import Image from "next/image";
+import HttpClient from "../http/httpClient";
 
 const Actus = () => {
+  const [news, setNews] = useState([]);
+
+  async function fetchNews() {
+    const result = await HttpClient.get("/api/news");
+    setNews(result.data);
+  }
+
+  useEffect(() => {
+    try {
+      fetchNews();
+    } catch (e) {
+      console.error(e);
+    }
+  }, []);
+
+  const newsList = news.map((item, index) => {
+    return (
+      <div key={index} className={styles["post-container"]}>
+        <div className={styles["title"]}>{item.title}</div>
+        <div className={styles["detail"]}>{item.detail}</div>
+        <div className={styles["date"]}>{item.date}</div>
+      </div>
+    );
+  });
+
   return (
     <div className={"site-wrapper"}>
       <div>
@@ -18,26 +44,7 @@ const Actus = () => {
       </div>
 
       <main className={styles.main}>
-        <div className={styles.left}>
-          <div className={styles["post-container"]}>
-            <div className={styles["title"]}>
-              Nouveau spectacle IMMERSIF – Résidence de création
-            </div>
-            <div className={styles["detail"]}>
-              Couvent Levat/Ateliers JUXTAPOZ – Marseille
-              <br />
-              Avril, Mai 2021
-            </div>
-          </div>
-          <div className={styles["post-container"]}>
-            <div className={styles["title"]}>
-              J’aurais voulu être Jeff Bezos
-            </div>
-            <div className={styles["detail"]}>
-              Concours Jeunes metteurs en scène Théâtre 13 <br /> 2021
-            </div>
-          </div>
-        </div>
+        <div className={styles.left}>{newsList}</div>
         <div className={styles.right}>
           <Image src="/images/actualites.jpg" layout="fill" />
         </div>
