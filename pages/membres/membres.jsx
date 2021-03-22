@@ -17,120 +17,124 @@ const Members = () => {
       <main className={styles.main}>
         <div className={styles.title}>Membres : </div>
         <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/chloe" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>Chloé Chycki / &nbsp; </div>
-            <div className={styles["item-role"]}> Comédienne, clown</div>
-            {/* </Link> */}
-          </div>
-        </div>
-        <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/pauline" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>
-              Pauline Laurendeau / &nbsp;{" "}
+          <Link href="/membres/chloe">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>Chloé Chycki / &nbsp; </div>
+              <div className={styles["item-role"]}> Comédienne, clown</div>
             </div>
-            <div className={styles["item-role"]}> Comédienne, musicienne</div>
-            {/* </Link> */}
-          </div>
+          </Link>
         </div>
         <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/mathias" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>Mathias Minne / &nbsp; </div>
-            <div className={styles["item-role"]}> Comédien, réalisateur</div>
-            {/* </Link> */}
-          </div>
-        </div>
-        <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/arthur" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>Arthur Viadieu / &nbsp; </div>
-            <div className={styles["item-role"]}> Comédien</div>
-            {/* </Link> */}
-          </div>
-        </div>
-        <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/romain" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>
-              Romain Blanchard / &nbsp;{" "}
+          <Link href="/membres/pauline">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>
+                Pauline Laurendeau / &nbsp;{" "}
+              </div>
+              <div className={styles["item-role"]}> Comédienne, musicienne</div>
             </div>
-            <div className={styles["item-role"]}> Comédien</div>
-            {/* </Link> */}
-          </div>
+          </Link>
         </div>
         <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/marieline" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>
-              Marie-Line Vergnaux / &nbsp;{" "}
+          <Link href="/membres/mathias">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>Mathias Minne / &nbsp; </div>
+              <div className={styles["item-role"]}> Comédien, réalisateur</div>
             </div>
-            <div className={styles["item-role"]}>
-              {" "}
-              Comédienne, metteuse en scène
+          </Link>
+        </div>
+        <div className={styles["list-container"]}>
+          <Link href="/membres/arthur">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>
+                Arthur Viadieu / &nbsp;{" "}
+              </div>
+              <div className={styles["item-role"]}> Comédien</div>
             </div>
-            {/* </Link> */}
-          </div>
+          </Link>
         </div>
         <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/bob" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>Bob Levasseur / &nbsp; </div>
-            <div className={styles["item-role"]}> Comédien</div>
-            {/* </Link> */}
-          </div>
-        </div>
-        <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/benjamin" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>Benjamin Kühn / &nbsp; </div>
-            <div className={styles["item-role"]}> Comédien, réalisateur</div>
-            {/* </Link> */}
-          </div>
-        </div>
-        <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/anais" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>Anaïs Ancel / &nbsp; </div>
-            <div className={styles["item-role"]}> Comédienne, clown</div>
-            {/* </Link> */}
-          </div>
-        </div>
-        <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/lison" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>Lison Rault / &nbsp; </div>
-            <div className={styles["item-role"]}> Comédienne</div>
-            {/* </Link> */}
-          </div>
-        </div>
-        <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/regis" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>Régis Fortino / &nbsp; </div>
-            <div className={styles["item-role"]}> Comédien</div>
-            {/* </Link> */}
-          </div>
-        </div>
-        <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/sarah" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>Sarah Calcine / &nbsp; </div>
-            <div className={styles["item-role"]}>
-              {" "}
-              Comédienne, metteuse en scène
+          <Link href="/membres/romain">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>
+                Romain Blanchard / &nbsp;{" "}
+              </div>
+              <div className={styles["item-role"]}> Comédien</div>
             </div>
-            {/* </Link> */}
-          </div>
+          </Link>
         </div>
         <div className={styles["list-container"]}>
-          <div className={styles["item-container"]}>
-            {/* <Link to="/member/antoine" className={styles["name-container"]}> */}
-            <div className={styles["item-name"]}>Antoine Mermet / &nbsp; </div>
-            <div className={styles["item-role"]}> musicien, compositeur</div>
-            {/* </Link> */}
-          </div>
+          <Link href="/membres/marieline">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>
+                Marie-Line Vergnaux / &nbsp;{" "}
+              </div>
+              <div className={styles["item-role"]}>
+                {" "}
+                Comédienne, metteuse en scène
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className={styles["list-container"]}>
+          <Link href="/membres/bob">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>Bob Levasseur / &nbsp; </div>
+              <div className={styles["item-role"]}> Comédien</div>
+            </div>
+          </Link>
+        </div>
+        <div className={styles["list-container"]}>
+          <Link href="/membres/benjamin">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>Benjamin Kühn / &nbsp; </div>
+              <div className={styles["item-role"]}> Comédien, réalisateur</div>
+            </div>
+          </Link>
+        </div>
+        <div className={styles["list-container"]}>
+          <Link href="/membres/anais">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>Anaïs Ancel / &nbsp; </div>
+              <div className={styles["item-role"]}> Comédienne, clown</div>
+            </div>
+          </Link>
+        </div>
+        <div className={styles["list-container"]}>
+          <Link href="/membres/lison">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>Lison Rault / &nbsp; </div>
+              <div className={styles["item-role"]}> Comédienne</div>
+            </div>
+          </Link>
+        </div>
+        <div className={styles["list-container"]}>
+          <Link href="/membres/regis">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>Régis Fortino / &nbsp; </div>
+              <div className={styles["item-role"]}> Comédien</div>
+            </div>
+          </Link>
+        </div>
+        <div className={styles["list-container"]}>
+          <Link href="/membres/sarah">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>Sarah Calcine / &nbsp; </div>
+              <div className={styles["item-role"]}>
+                {" "}
+                Comédienne, metteuse en scène
+              </div>
+            </div>
+          </Link>
+        </div>
+        <div className={styles["list-container"]}>
+          <Link href="/membres/antoine">
+            <div className={styles["item-container"]}>
+              <div className={styles["item-name"]}>
+                Antoine Mermet / &nbsp;{" "}
+              </div>
+              <div className={styles["item-role"]}> musicien, compositeur</div>
+            </div>
+          </Link>
         </div>
       </main>
       <P4Banner />

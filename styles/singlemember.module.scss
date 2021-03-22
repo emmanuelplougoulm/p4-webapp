@@ -1,0 +1,191 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-left: 40px;
+  flex-grow: 1;
+  .title {
+    text-align: left;
+    font-size: 20px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 300px;
+    margin-bottom: 1em;
+  }
+  .left {
+    width: 40%;
+    padding-top: 20px;
+    .name {
+      text-align: left;
+      font-size: 35px;
+      font-family: "Montserrat";
+      font-weight: 700;
+      text-transform: uppercase;
+      max-width: 600px;
+      margin-bottom: 0.5em;
+    }
+    .position {
+      text-align: left;
+      font-size: 20px;
+      font-family: "Lato";
+      font-weight: 400;
+      max-width: 600px;
+      margin-bottom: 1em;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      .infos {
+        list-style: none;
+        text-align: left;
+        font-size: 20px;
+        font-family: "Lato";
+        font-weight: 500;
+        max-width: 600px;
+        max-height: 300px;
+        margin-bottom: 1em;
+      }
+      li {
+        margin-bottom: 0.2em;
+      }
+    }
+  }
+  .right {
+    width: 60%;
+    .generic {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      img {
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .generic:hover {
+      filter: grayscale(0%);
+      -webkit-filter: grayscale(0%);
+    }
+
+    .pauline {
+      filter: grayscale(100%);
+      background-size: cover;
+      height: 100%;
+    }
+    .mathias {
+      filter: grayscale(100%);
+      background-image: url("../public/images/members/mathias.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+    .arthur {
+      filter: grayscale(100%);
+      background-image: url("../public/images/members/arthur.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+    .romain {
+      filter: grayscale(100%);
+      background-image: url("../public/images/members/romain.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+    .marieline {
+      filter: grayscale(100%);
+      background-image: url("../public/images/members/marieline.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+    .bob {
+      filter: grayscale(100%);
+      background-image: url("../public/images/members/bob.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+    .benjamin {
+      filter: grayscale(100%);
+      background-image: url("../public/images/members/benjamin.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+    .anais {
+      filter: grayscale(100%);
+      background-image: url("../public/images/members/anais.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+    .lison {
+      filter: grayscale(100%);
+      background-image: url("../public/images/members/lison.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+    .regis {
+      filter: grayscale(100%);
+      background-image: url("../public/images/members/regis.jpg");
+      background-size: cover;
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    flex-direction: column;
+    padding: 5px 20px;
+    font-size: 12px;
+    .title {
+      font-size: 16px;
+    }
+    .left {
+      width: 100%;
+      margin-bottom: 10px;
+      .name {
+        text-align: left;
+        font-size: 20px;
+        font-family: "Montserrat";
+        font-weight: 700;
+        text-transform: uppercase;
+        max-width: 600px;
+        margin-bottom: 0.5em;
+      }
+      .position {
+        text-align: left;
+        font-size: 14px;
+      }
+      ul {
+        .infos {
+          max-width: 300px;
+          margin-bottom: 0.5em;
+        }
+        li {
+          margin-bottom: 0.2em;
+        }
+      }
+    }
+    .right {
+      width: 100%;
+      margin-right: 10px;
+
+      .generic {
+        width: 50%;
+        display: flex;
+      }
+
+      .romain {
+        filter: grayscale(100%);
+        background-image: url("../public/images/members/romain-small.png");
+      }
+
+      .regis {
+        background-image: url("../public/images/members/regis-small.png");
+      }
+    }
+  }
+}

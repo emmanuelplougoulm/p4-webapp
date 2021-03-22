@@ -1,0 +1,158 @@
+{
+  "chloe": {
+    "name": "Chloé Chycki",
+    "position": "Comédienne, clown.",
+    "infos": [
+      "Licence Histoire de l’art option Art du spectacle",
+      "Studio Muller (Paris)",
+      "Conservatoire 11e arrondissement (Paris)",
+      "Cie le Vélo volé",
+      "Cie Luce",
+      "Cie la Valise ondulatoire",
+      "Cie les sbires sibériens"
+    ]
+  },
+  "pauline": {
+    "name": "Pauline Laurendeau",
+    "position": "Comédienne, musicienne.",
+    "infos": [
+      "Master Psychologie clinique",
+      "Ecole La scène sur Saône (Lyon)",
+      "Conférence burlesque",
+      "Le bernoute",
+      "Cie la Connerie Nouvelle"
+    ]
+  },
+  "mathias": {
+    "name": "Mathias Minne",
+    "position": "Comédien, réalisateur.",
+    "infos": [
+      "Conservatoire du 11e (Paris)",
+      "Cie La boite aux lettres",
+      "Antigone Ivo van Hove",
+      "Films, Téléfilms, Clips",
+      "Ganjouriho (Festival de Clermont Ferrand, 1er Prix Festival 7e Lune)",
+      "Il fait jour ce matin"
+    ]
+  },
+  "arthur": {
+    "name": "Arthur Viadieu",
+    "position": "Comédien",
+    "infos": [
+      "Comédien, metteur en scène",
+      "Master Biologie Moléculaire",
+      "Conservatoire du 11e (Paris)",
+      "Ecole Jacques Lecoq",
+      "Théâtre Majaz",
+      "Sarah Calcine",
+      "Cie luce"
+    ]
+  },
+  "romain": {
+    "name": "Romain Blanchard",
+    "position": "Comédien",
+    "infos": [
+      "Conservatoire de Genève",
+      "Conservatoire de Lyon",
+      "Stage avec Krystian Lupa",
+      "Cie Tumulte",
+      "Collectif Xanadou",
+      "Sarah Calcine"
+    ]
+  },
+  "marieline": {
+    "name": "Marie-Line Vergnaux",
+    "position": "Comédienne, Metteuse en scène",
+    "infos": [
+      "Licence Art du Spectacle",
+      "Ecole les Enfants Terribles (Paris)",
+      "Conservatoire du 11e (Paris)",
+      "Cie Bacchus",
+      "Cie Luce",
+      "Mise en scène : Quelqu’un pour veiller sur moi",
+      "2h14 Mention Spéciale Prix Théâtre 13 2016"
+    ]
+  },
+  "benjamin": {
+    "name": "Benjamin Kühn",
+    "position": "Comédien, réalisateur",
+    "infos": [
+      "Conservatoire du 11e (Paris)",
+      "Cie La boîte aux lettres",
+      "Réalisateur :",
+      " Mademoiselle Apocalypse,",
+      " Histoire de mortimer,",
+      " Le réveil de Lily,",
+      "Clips pour Kidwise et Feu! Chatterton,"
+    ]
+  },
+  "anais": {
+    "name": "Anaïs Ancel",
+    "position": "Comédienne, clown",
+    "infos": [
+      "Studio Alain de Bock",
+      "Cie Les épis noirs",
+      "Cie du Crayon",
+      "Collectif Thermos",
+      "Cie Arzapar",
+      "Cie Sans soucis",
+      "Cie Viva",
+      "Electre des bas-fonds Simon Abkarian"
+    ]
+  },
+  "bob": {
+    "name": "Bob Levasseur",
+    "position": "Comédien",
+    "infos": [
+      "Studio Alain de Bock",
+      "Formacion integral de Teatro Corporal Jorge Costa (Buenos Aires)",
+      "Conservatoire du 11e (Paris)",
+      "Cie les Mille chandelles",
+      "Cie La boîte aux lettres",
+      "Cie Luce (2h14)",
+      "Téléfilms (TF1, FR2, CANAL PLUS), clips, publicité"
+    ]
+  },
+  "lison": {
+    "name": "Lison Rault",
+    "position": "Comédienne",
+    "infos": [
+      "Licence médiation culturelle",
+      "Conservatoire Cergy-Pontoise",
+      "Conservatoire de Montpellier (ENSAD)",
+      "Cie Tire pas la nape",
+      "Ateliers Medicis (création Radiophonique)"
+    ]
+  },
+  "regis": {
+    "name": "Régis Fortino",
+    "position": "Comédien, réalisateur",
+    "infos": [""]
+  },
+  "antoine": {
+    "name": "Antoine Mermet",
+    "position": "Musicien, Compositeur",
+    "infos": [
+      "CHROMB! / Saint Sadrill",
+      "Bouche Amplifiée / Tiphaine Calmettes",
+      "The Very Big Experimental Toubifri Orchestra",
+      "Vocoder / Service Délicat",
+      "Collectif Dur&Doux / Cie Groupe Fantomas",
+      "Cie Kopfkino / Cie Connerie Nouvelle"
+    ]
+  },
+  "sarah": {
+    "name": "Sarah Calcine",
+    "position": "Comédienne, metteuse en scène",
+    "infos": [
+      "Manufacture de Lausanne / Compagnie Boule à facettes",
+      "On achève bien les oiseaux / Festival Fragments",
+      "Mon petit monde porno, de Gabriel Calderón",
+      "Compagnie COMPLOT (Uruguay)",
+      "National d'Arts Scéniques de Montevideo",
+      "Mains d'Oeuvres / Innocence de Dea Loher",
+      "Festival in situ de Villeréal",
+      "Talents Cannes Adami / Sacha (série Arte)"
+    ]
+  }
+}
