@@ -28,6 +28,29 @@ const handler = async (req, res) => {
         });
       });
   }
+
+  if (req.method === "GET") {
+    // HANDLE GET BY ID
+    Show.findById(showId)
+      .then((show) => {
+        if (show) {
+          res.send(show);
+        }
+        return res.status(404).send({
+          message: "Show not exist with id " + req.params.showId,
+        });
+      })
+      .catch((err) => {
+        if (err.kind === "ObjectId") {
+          return res.status(404).send({
+            message: "Show not exist with id " + req.params.showId,
+          });
+        }
+        return res.status(500).send({
+          message: "Error retrieving book with id " + req.params.showId,
+        });
+      });
+  }
 };
 
 export default connectDB(handler);

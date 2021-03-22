@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../styles/admin.module.scss";
-// import Api from "../../Axios/api";
+import HttpClient from "../http/httpClient";
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,7 +9,7 @@ const Admin = () => {
   const [shows, setShows] = useState([]);
   const [news, setNews] = useState([]);
   const [login, setLogin] = useState("");
-  const [isAuth, setAuth] = useState(false);
+  const [isAuth, setAuth] = useState(true);
 
   const [showTitle, setShowTitle] = useState("");
   const [showDate, setDate] = useState("");
@@ -38,34 +38,34 @@ const Admin = () => {
     }
   };
 
-  //   async function fetchNews() {
-  //     const result = await Api.get("news");
-  //     setNews(result.data);
-  //   }
+  async function fetchNews() {
+    const result = await HttpClient.get("/api/news");
+    setNews(result.data);
+  }
 
-  //   useEffect(() => {
-  //     try {
-  //       fetchNews();
-  //     } catch (e) {
-  //       console.error(e);
-  //     }
-  //   }, []);
+  useEffect(() => {
+    try {
+      fetchNews();
+    } catch (e) {
+      console.error(e);
+    }
+  }, []);
 
-  //   async function fetchShows() {
-  //     const result = await Api.get("shows");
-  //     setShows(result.data);
-  //   }
+  async function fetchShows() {
+    const result = await HttpClient.get("/api/show");
+    setShows(result.data);
+  }
 
-  //   useEffect(() => {
-  //     try {
-  //       fetchShows();
-  //     } catch (e) {
-  //       console.error(e);
-  //     }
-  //   }, []);
+  useEffect(() => {
+    try {
+      fetchShows();
+    } catch (e) {
+      console.error(e);
+    }
+  }, []);
 
   const createShow = () => {
-    Api.post("/shows", {
+    HttpClient.post("/api/show", {
       title: showTitle,
       date: showDate,
       detail: showDetail,
@@ -83,8 +83,8 @@ const Admin = () => {
       .catch((err) => console.log(err.toJSON()));
   };
 
-  const deleteShow = (id) => {
-    Api.delete(`/shows/${id}`).then((res) => {
+  const deleteShow = (showId) => {
+    HttpClient.delete(`/api/show/${showId}`).then((res) => {
       if (res.status === 200) {
         notify("success-delete");
       }
@@ -93,7 +93,7 @@ const Admin = () => {
   };
 
   const createNews = () => {
-    Api.post("/news", {
+    HttpClient.post("/api/news", {
       title: newsTitle,
       detail: newsDetail,
       date: newsDate,
@@ -105,8 +105,8 @@ const Admin = () => {
     });
   };
 
-  const deleteNews = (id) => {
-    Api.delete(`/news/${id}`).then((res) => {
+  const deleteNews = (newsId) => {
+    HttpClient.delete(`/api/news/${newsId}`).then((res) => {
       if (res.status === 200) {
         notify("success-delete");
       }
@@ -168,7 +168,7 @@ const Admin = () => {
       )}
 
       {isAuth && (
-        <div className={styles.container}>
+        <div className="flex justify-center pt-20">
           <div className={styles.section}>
             <div className={styles["list-container"]}>
               <div

@@ -5,9 +5,11 @@ import ProjectsBanner from "../../components/ProjectBanner/ProjectBanner";
 import { useHistory } from "react-router-dom";
 import Link from "next/link";
 import Image from "next/image";
+import HttpClient from "../../http/httpClient";
 
 const Spectacles = () => {
   const history = useHistory();
+  const [shows, setShows] = useState([]);
   const [background, setBackground] = useState("/images/bezos.png");
 
   useEffect(() => {
@@ -19,6 +21,32 @@ const Spectacles = () => {
       else return "/images/bezos.png";
     };
   }, [background]);
+
+  async function fetchShows() {
+    const result = await HttpClient.get("/api/show");
+    setShows(result.data);
+  }
+
+  useEffect(() => {
+    try {
+      fetchShows();
+    } catch (e) {
+      console.error(e);
+    }
+  }, []);
+
+  const showList = shows.map((item, index) => {
+    // const showId = item_id;
+    return (
+      <div key={index} className={styles["project-container"]}>
+        <div className={styles["title"]}>
+          <Link className={styles.link} href={`/spectacles/${item._id}`}>
+            {item.title}
+          </Link>
+        </div>
+      </div>
+    );
+  });
 
   return (
     <div className={"site-wrapper"}>
@@ -33,52 +61,7 @@ const Spectacles = () => {
       </div>
 
       <main className={styles.main}>
-        <div className={styles.left}>
-          <div className={styles["project-container"]}>
-            <div
-              className={styles["title"]}
-              onMouseEnter={() => setBackground("/images/bezos.png")}
-            >
-              <Link href="/bezos">
-                <a className={styles.link}>J'aurais voulu être Jeff Bezos</a>
-              </Link>
-            </div>
-          </div>
-          <div className={styles["project-container"]}>
-            <div
-              className={styles["title"]}
-              onMouseEnter={() => setBackground("/images/insoutenables.png")}
-            >
-              <Link href="/insoutenables">
-                <a className={styles.link}>Insoutenables longues étreintes </a>
-              </Link>
-            </div>
-          </div>
-          <div
-            className={styles["project-container"]}
-            onMouseEnter={() => setBackground("/images/tail.png")}
-          >
-            <div className={styles["title"]}>
-              <Link href="/tail">
-                <a className={styles.link}>
-                  Seule la queue du castor peut tarir la rivière
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div
-            className={styles["project-container"]}
-            onMouseEnter={() => setBackground("/images/masoeur.png")}
-          >
-            <div className={styles["title"]}>
-              <Link href="/masoeur">
-                <a className={styles.link}>
-                  Ma soeur, tes lèvres sont de porcelaine
-                </a>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <div className={styles.left}>{showList}</div>
         <div className={styles["bg-container"]}>
           <Image src={background} layout="fill" alt="-" />
         </div>

@@ -1,0 +1,84 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  background-color: black;
+  .link {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+    background-color: white;
+    height: 100%;
+    width: 50%;
+  }
+  .link > div {
+    margin-left: 40px;
+  }
+}
+.main {
+  flex-grow: 1;
+  border-top: 1px black solid;
+  display: flex;
+  justify-content: center;
+  .photo-1 {
+    background-image: url("../public/images/bezos-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30%;
+  }
+  .photo-2 {
+    background-image: url("../public/images/bezos-1.png");
+    background-size: cover;
+    width: 30%;
+  }
+  .text-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    .title {
+      text-align: left;
+      font-size: 20px;
+      font-family: "Montserrat";
+      font-weight: 700;
+      text-transform: uppercase;
+      max-width: 400px;
+    }
+    .paragraph {
+      margin-top: 2em;
+      text-align: left;
+      font-size: 12px;
+      font-family: "Montserrat";
+      font-weight: 500;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    border-top: 1px black solid;
+    display: flex;
+    justify-content: center;
+    .photo-1 {
+      display: none;
+    }
+    .photo-2 {
+      display: none;
+    }
+    .text-container {
+      width: 100%;
+      .title {
+        font-size: 12;
+      }
+      .paragraph {
+        overflow: scroll;
+        -webkit-overflow-scrolling: auto;
+        font-size: 12px;
+        max-height: 400px;
+      }
+    }
+  }
+}
