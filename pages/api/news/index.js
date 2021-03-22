@@ -1,7 +1,8 @@
-import connectDB from "../../middleware/mongodb";
-import News from "../../models/news.model";
+import connectDB from "../../../middleware/mongodb";
+import News from "../../../models/news.model";
 
 const handler = async (req, res) => {
+  await connectDB();
   // HANDLE POST
   if (req.method === "POST") {
     if (!req.body.title) {
