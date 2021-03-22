@@ -1,5 +1,5 @@
-import connectDB from "../../middleware/mongodb";
-import Show from "../../models/show.model";
+import connectDB from "../../../middleware/mongodb";
+import Show from "../../../models/show.model";
 
 const handler = async (req, res) => {
   // HANDLE POST
@@ -11,13 +11,13 @@ const handler = async (req, res) => {
     }
     // Create a Show
     const show = new Show({
-      title: "req.body.title",
-      date: "req.body.date",
-      detail: "req.body.detail",
-      paragraph1: "req.body.paragraph1",
-      paragraph2: "req.body.paragraph2",
-      paragraph3: "req.body.paragraph3",
-      paragraph4: "req.body.paragraph4",
+      title: req.body.title,
+      date: req.body.date,
+      detail: req.body.detail,
+      paragraph1: req.body.paragraph1,
+      paragraph2: req.body.paragraph2,
+      paragraph3: req.body.paragraph3,
+      paragraph4: req.body.paragraph4,
     });
 
     // Save Show in the database
