@@ -10,17 +10,21 @@ import HttpClient from "../../http/httpClient";
 const Spectacles = () => {
   const history = useHistory();
   const [shows, setShows] = useState([]);
+  const [activeShow, setActiveShow] = useState("");
   const [background, setBackground] = useState("/images/bezos.png");
 
+  const findImage = () => {
+    if (activeShow.includes("BEZOS")) setBackground("/images/bezos.png");
+    if (activeShow.includes("INSOUTENABLES"))
+      setBackground("/images/insoutenables.png");
+    if (activeShow.includes("CASTOR")) setBackground("/images/tail.png");
+    if (activeShow.includes("SOEUR")) setBackground("/images/masoeur.png");
+    else return;
+  };
+
   useEffect(() => {
-    const findImage = (background) => {
-      if ((background = "bezos")) return "/images/bezos.png";
-      if ((background = "insoutenable")) return "/images/insoutenables.png";
-      if ((background = "tail")) return "/images/tail.png";
-      if ((background = "sister")) return "/images/masoeur.png";
-      else return "/images/bezos.png";
-    };
-  }, [background]);
+    findImage();
+  }, [activeShow]);
 
   async function fetchShows() {
     const result = await HttpClient.get("/api/show");
@@ -36,12 +40,14 @@ const Spectacles = () => {
   }, []);
 
   const showList = shows.map((item, index) => {
-    // const showId = item_id;
     return (
       <div key={index} className={styles["project-container"]}>
-        <div className={styles["title"]}>
-          <Link className={styles.link} href={`/spectacles/${item._id}`}>
-            {item.title}
+        <div
+          className={styles["title"]}
+          onMouseEnter={() => setActiveShow(item.title)}
+        >
+          <Link href={`/spectacles/${item._id}`}>
+            <a className={styles.link}>{item.title}</a>
           </Link>
         </div>
       </div>

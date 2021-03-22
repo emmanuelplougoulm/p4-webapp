@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../../styles/singlespectacle.module.scss";
+import styles from "../../styles/singleSpectacle.module.scss";
 import P4Banner from "../../components/P4Banner/P4Banner";
 import ProjectBanner from "../../components/ProjectBanner/ProjectBanner";
 import { useHistory } from "react-router-dom";
