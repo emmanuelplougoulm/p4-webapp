@@ -9,7 +9,7 @@ const Admin = () => {
   const [shows, setShows] = useState([]);
   const [news, setNews] = useState([]);
   const [login, setLogin] = useState("");
-  const [isAuth, setAuth] = useState(true);
+  const [isAuth, setAuth] = useState(false);
 
   const [showTitle, setShowTitle] = useState("");
   const [showDate, setDate] = useState("");
@@ -115,7 +115,7 @@ const Admin = () => {
   };
 
   const handleLogin = () => {
-    if (login === "monde-nouveau") {
+    if (login === process.env.auth) {
       setAuth(true);
     }
   };
@@ -145,23 +145,26 @@ const Admin = () => {
   return (
     <div className={"site-wrapper"}>
       {!isAuth && (
-        <div className={styles["login-container"]}>
-          <div className={styles["duo"]}>
-            <label
-              style={{ marginBottom: "5px", fontWeight: "bolder" }}
-              htmlFor="title"
-            >
-              Mot magique:{" "}
-            </label>
-            <input
-              onChange={(event) => setLogin(event.target.value)}
-              type="text"
-              name="title"
-              id="title"
-              required
-            />
-            <div className={styles["button"]} onClick={() => handleLogin()}>
-              Valider{" "}
+        <div className="flex justify-center pt-20">
+          <div className={styles["login-container"]}>
+            <div className={styles["duo"]}>
+              <label
+                style={{ marginBottom: "5px", fontWeight: "bolder" }}
+                htmlFor="title"
+              >
+                Mot magique:{" "}
+              </label>
+              <input
+                onChange={(event) => setLogin(event.target.value)}
+                type="text"
+                name="title"
+                id="title"
+                style={{ border: "1px grey solid" }}
+                required
+              />
+              <div className={styles["button"]} onClick={() => handleLogin()}>
+                Valider{" "}
+              </div>
             </div>
           </div>
         </div>
