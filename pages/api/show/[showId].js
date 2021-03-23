@@ -1,8 +1,22 @@
+import Cors from "cors";
+import initMiddleware from "../../../middleware/init-middleware";
 import connectDB from "../../../middleware/mongodb";
 import Show from "../../../models/show.model";
 
+// Initialize the cors middleware
+const cors = initMiddleware(
+  // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
+  Cors({
+    origin: "https://p4-collectif.com",
+    // Only allow requests with GET, POST and OPTIONS
+    methods: ["GET", "POST"],
+  })
+);
+
 const handler = async (req, res) => {
-  await connectDB();
+  // Run cors
+  await cors(req, res);
+
   // HANDLE DELETE
   const { showId } = req.query;
 
