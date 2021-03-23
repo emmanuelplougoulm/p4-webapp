@@ -115,7 +115,7 @@ const Admin = () => {
   };
 
   const handleLogin = () => {
-    if (login === process.env.auth) {
+    if (login === process.env.NEXT_PUBLIC_MAGIC_WORD) {
       setAuth(true);
     }
   };
