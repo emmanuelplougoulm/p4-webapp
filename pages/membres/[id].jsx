@@ -54,14 +54,10 @@ const Member = () => {
 
       <main className={styles.main}>
         <div className={styles.left}>
-          <div className={styles.name}>
-            {id !== undefined && Members[id].name}
-          </div>
-          <div className={styles.position}>
-            {id !== undefined && Members[id].position}
-          </div>
+          <div className={styles.name}>{Members[id]?.name}</div>
+          <div className={styles.position}>{Members[id]?.position}</div>
           <ul className={styles.infos}>
-            {Members[id].infos.map((element) => (
+            {Members[id]?.infos.map((element) => (
               <li>{element} </li>
             ))}
             {id === "mathias" && (
