@@ -1,11 +1,7 @@
 import styles from "./P4Banner.module.scss";
 import Ticker from "react-ticker";
 
-interface IProps {
-  speed?: number;
-}
-
-const P4Banner: React.FC<IProps> = ({ speed }) => {
+const P4Banner = ({ speed }) => {
   return (
     <div className={styles.container}>
       <Ticker speed={speed}>
