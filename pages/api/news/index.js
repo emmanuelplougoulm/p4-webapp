@@ -7,7 +7,7 @@ import News from "../../../models/news.model";
 const cors = initMiddleware(
   // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
   Cors({
-    origin: "https://p4-collectif.com",
+    origin: "http://p4-collectif.vercel.app",
     // Only allow requests with GET, POST and OPTIONS
     methods: ["GET", "POST"],
   })
@@ -15,7 +15,7 @@ const cors = initMiddleware(
 
 const handler = async (req, res) => {
   // Run cors
-  // await cors(req, res);
+  await cors(req, res);
   await connectDB();
   // HANDLE POST
   if (req.method === "POST") {
@@ -46,10 +46,6 @@ const handler = async (req, res) => {
   if (req.method === "GET") {
     News.find()
       .then((news) => {
-        console.log("news", news);
-
-        // const result = news;
-        // res.status(200).json({ ...news });
         res.status(200).send(news);
       })
       .catch((err) => {
