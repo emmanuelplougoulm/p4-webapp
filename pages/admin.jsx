@@ -115,12 +115,17 @@ const Admin = ({ newsData, showsData }) => {
   };
 
   const deleteNews = (newsId) => {
-    HttpClient.delete(`/api/news/${newsId}`).then((res) => {
-      if (res.status === 200) {
-        notify("success-delete");
-      }
-      fetchNews();
-    });
+    HttpClient.delete(`/api/news/${newsId}`)
+      .then((res) => {
+        if (res.status === 200) {
+          notify("success-delete");
+        }
+
+        fetchNews();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   const handleLogin = () => {
