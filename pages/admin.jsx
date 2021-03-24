@@ -47,10 +47,10 @@ const Admin = ({ newsData, showsData }) => {
   // setNews([newsData]);
   // });
 
-  // async function fetchNews() {
-  //   const result = await HttpClient.get("/api/news");
-  //   setNews(result.data);
-  // }
+  async function fetchNews() {
+    const result = await HttpClient.get("/api/news");
+    setNews(result.data);
+  }
 
   // useEffect(() => {
   //   try {
@@ -337,7 +337,7 @@ const Admin = ({ newsData, showsData }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getInitialProps() {
   const news = await HttpClient.get("/api/news");
   const shows = await HttpClient.get("/api/show");
 
