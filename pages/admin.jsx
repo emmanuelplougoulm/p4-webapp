@@ -337,7 +337,7 @@ const Admin = ({ newsData, showsData }) => {
   );
 };
 
-export async function getInitialProps() {
+export async function getStaticProps() {
   const news = await HttpClient.get("/api/news");
   const shows = await HttpClient.get("/api/show");
 
