@@ -339,12 +339,7 @@ const Admin = ({ newsData, showsData }) => {
 
 export async function getStaticProps() {
   const news = await HttpClient.get("/api/news");
-  console.log("news", news);
-
   const shows = await HttpClient.get("/api/show");
-
-  // const res = await fetch("https://api.github.com/repos/vercel/next.js");
-  // const json = await res.json();
 
   return {
     props: {
