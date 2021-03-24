@@ -5,9 +5,9 @@ import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Admin = () => {
-  const [shows, setShows] = useState([]);
-  const [news, setNews] = useState([]);
+const Admin = ({ newsData, showsData }) => {
+  const [shows, setShows] = useState(JSON.parse(showsData));
+  const [news, setNews] = useState(JSON.parse(newsData));
   const [login, setLogin] = useState("");
   const [isAuth, setAuth] = useState(false);
 
@@ -22,6 +22,9 @@ const Admin = () => {
   const [newsTitle, setNewsTitle] = useState("");
   const [newsDetail, setNewsDetail] = useState("");
   const [newsDate, setNewsDate] = useState("");
+
+  // console.log("news", news);
+  // console.log("shows", shows);
 
   const notify = (key) => {
     if (key === "success-create") {
@@ -38,31 +41,37 @@ const Admin = () => {
     }
   };
 
-  async function fetchNews() {
-    const result = await HttpClient.get("/api/news");
-    setNews(result.data);
-  }
+  // console.log("newsData", newsData);
 
-  useEffect(() => {
-    try {
-      fetchNews();
-    } catch (e) {
-      console.error(e);
-    }
-  }, []);
+  // useEffect(() => {
+  // setNews([newsData]);
+  // });
 
-  async function fetchShows() {
-    const result = await HttpClient.get("/api/show");
-    setShows(result.data);
-  }
+  // async function fetchNews() {
+  //   const result = await HttpClient.get("/api/news");
+  //   setNews(result.data);
+  // }
 
-  useEffect(() => {
-    try {
-      fetchShows();
-    } catch (e) {
-      console.error(e);
-    }
-  }, []);
+  // useEffect(() => {
+  //   try {
+  //     fetchNews();
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // }, []);
+
+  // async function fetchShows() {
+  //   const result = await HttpClient.get("/api/show");
+  //   setShows(result.data);
+  // }
+
+  // useEffect(() => {
+  //   try {
+  //     fetchShows();
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // }, []);
 
   const createShow = () => {
     HttpClient.post("/api/show", {
@@ -327,5 +336,22 @@ const Admin = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const news = await HttpClient.get("/api/news");
+  console.log("news", news);
+
+  const shows = await HttpClient.get("/api/show");
+
+  // const res = await fetch("https://api.github.com/repos/vercel/next.js");
+  // const json = await res.json();
+
+  return {
+    props: {
+      newsData: JSON.stringify(news.data),
+      showsData: JSON.stringify(shows.data),
+    },
+  };
+}
 
 export default Admin;

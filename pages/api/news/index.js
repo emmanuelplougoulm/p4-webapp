@@ -15,7 +15,7 @@ const cors = initMiddleware(
 
 const handler = async (req, res) => {
   // Run cors
-  await cors(req, res);
+  // await cors(req, res);
   await connectDB();
   // HANDLE POST
   if (req.method === "POST") {
@@ -46,7 +46,11 @@ const handler = async (req, res) => {
   if (req.method === "GET") {
     News.find()
       .then((news) => {
-        res.send(news);
+        console.log("news", news);
+
+        // const result = news;
+        // res.status(200).json({ ...news });
+        res.status(200).send(news);
       })
       .catch((err) => {
         res.status(500).send({
