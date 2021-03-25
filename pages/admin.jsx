@@ -6,8 +6,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Admin = ({ newsData, showsData }) => {
-  const [shows, setShows] = useState(JSON.parse(showsData));
-  const [news, setNews] = useState(JSON.parse(newsData));
+  const [shows, setShows] = useState(showsData);
+  const [news, setNews] = useState(newsData);
   const [login, setLogin] = useState("");
   const [isAuth, setAuth] = useState(true);
 
@@ -324,8 +324,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      newsData: JSON.stringify(news.data),
-      showsData: JSON.stringify(shows.data),
+      newsData: news.data,
+      showsData: shows.data,
     },
   };
 }
