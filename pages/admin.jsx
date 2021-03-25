@@ -43,10 +43,10 @@ const Admin = ({ newsData, showsData }) => {
     setNews(result.data);
   }
 
-  async function fetchShows() {
-    const result = await HttpClient.get("/api/show");
-    setShows(result.data);
-  }
+  // async function fetchShows() {
+  //   const result = await HttpClient.get("/api/show");
+  //   setShows(result.data);
+  // }
 
   const createShow = () => {
     HttpClient.post("/api/show", {
@@ -320,7 +320,7 @@ const Admin = ({ newsData, showsData }) => {
 
 export async function getStaticProps() {
   const news = await HttpClient.get("/api/news");
-  const shows = await HttpClient.get("/api/show");
+  // const shows = await HttpClient.get("/api/show");
 
   return {
     props: {

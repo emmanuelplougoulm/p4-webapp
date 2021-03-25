@@ -20,9 +20,13 @@ const handler = async (req, res) => {
 
   // HANDLE GET
   if (req.method === "GET") {
-    return Show.find().then((shows) => {
-      res.status(200).json(shows);
-    });
+    return Show.find()
+      .then((shows) => {
+        res.status(200).json(shows);
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
   }
 
   // HANDLE POST
