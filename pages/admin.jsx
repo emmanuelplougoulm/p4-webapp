@@ -6,10 +6,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Admin = ({ newsData, showsData }) => {
-  const [shows, setShows] = useState(JSON.parse(showsData));
+  const [shows, setShows] = useState([]);
   const [news, setNews] = useState(JSON.parse(newsData));
   const [login, setLogin] = useState("");
-  const [isAuth, setAuth] = useState(false);
+  const [isAuth, setAuth] = useState(true);
 
   const [showTitle, setShowTitle] = useState("");
   const [showDate, setDate] = useState("");
@@ -22,9 +22,6 @@ const Admin = ({ newsData, showsData }) => {
   const [newsTitle, setNewsTitle] = useState("");
   const [newsDetail, setNewsDetail] = useState("");
   const [newsDate, setNewsDate] = useState("");
-
-  // console.log("news", news);
-  // console.log("shows", shows);
 
   const notify = (key) => {
     if (key === "success-create") {
@@ -41,24 +38,10 @@ const Admin = ({ newsData, showsData }) => {
     }
   };
 
-  // console.log("newsData", newsData);
-
-  // useEffect(() => {
-  // setNews([newsData]);
-  // });
-
   async function fetchNews() {
     const result = await HttpClient.get("/api/news");
     setNews(result.data);
   }
-
-  // useEffect(() => {
-  //   try {
-  //     fetchNews();
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // }, []);
 
   // async function fetchShows() {
   //   const result = await HttpClient.get("/api/show");
@@ -344,12 +327,12 @@ const Admin = ({ newsData, showsData }) => {
 
 export async function getStaticProps() {
   const news = await HttpClient.get("/api/news");
-  const shows = await HttpClient.get("/api/show");
+  // const shows = await HttpClient.get("/api/show");
 
   return {
     props: {
       newsData: JSON.stringify(news.data),
-      showsData: JSON.stringify(shows.data),
+      // showsData: JSON.stringify(shows.data),
     },
   };
 }

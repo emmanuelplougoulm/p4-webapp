@@ -21,7 +21,7 @@ const handler = async (req, res) => {
   const { showId } = req.query;
 
   if (req.method === "DELETE") {
-    Show.findByIdAndRemove(showId)
+    return Show.findByIdAndRemove(showId)
       .then((show) => {
         if (show) {
           res.send({ message: "Show has been deleted successfully!" });
@@ -45,7 +45,7 @@ const handler = async (req, res) => {
 
   if (req.method === "GET") {
     // HANDLE GET BY ID
-    Show.findById(showId)
+    return Show.findById(showId)
       .then((show) => {
         if (show) {
           res.send(show);

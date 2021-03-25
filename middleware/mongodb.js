@@ -1,12 +1,19 @@
 import mongoose from "mongoose";
 
-const connectDB = (handler) => async (req, res) => {
-  await mongoose.connect(process.env.MONGODB_URI, {
+const connection = {};
+
+async function connectDB() {
+  if (connection.isConnected) {
+    return;
+  }
+
+  const db = await mongoose.connect(process.env.MONGODB_URI, {
     useUnifiedTopology: true,
     useFindAndModify: false,
     useNewUrlParser: true,
   });
-  return handler(req, res);
-};
+  connection.isConnected = db.connections[0].readyState;
+  console.log(connection.isConnected);
+}
 
 export default connectDB;

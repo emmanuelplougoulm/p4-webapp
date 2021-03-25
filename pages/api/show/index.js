@@ -35,7 +35,7 @@ const handler = async (req, res) => {
     });
 
     // Save Show in the database
-    show
+    return show
       .save()
       .then((show) => {
         res.send(show);
@@ -49,7 +49,7 @@ const handler = async (req, res) => {
   }
   // HANDLE GET
   if (req.method === "GET") {
-    Show.find()
+    return Show.find()
       .then((show) => {
         res.send(show);
       })

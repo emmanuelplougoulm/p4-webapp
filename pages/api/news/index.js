@@ -17,7 +17,13 @@ const handler = async (req, res) => {
   // Run cors
   await cors(req, res);
   await connectDB();
-  // HANDLE POST
+
+  if (req.method === "GET") {
+    return News.find().then((news) => {
+      res.status(200).json(news);
+    });
+  }
+
   if (req.method === "POST") {
     if (!req.body.title) {
       return res.status(400).send({
@@ -30,31 +36,17 @@ const handler = async (req, res) => {
       date: req.body.date,
     });
 
-    news
+    return news
       .save()
-      .then((news) => {
-        res.send(news);
-      })
-      .catch((err) => {
-        res.status(500).send({
-          message:
-            err.message || "Some error occurred while creating the news.",
-        });
-      });
-  }
-  // HANDLE GET
-  if (req.method === "GET") {
-    News.find()
       .then((news) => {
         res.status(200).send(news);
       })
       .catch((err) => {
         res.status(500).send({
-          message:
-            err.message || "Some error occurred while retrieving the book.",
+          message: err.message || "Some error occurred while saving the news.",
         });
       });
   }
 };
 
-export default connectDB(handler);
+export default handler;

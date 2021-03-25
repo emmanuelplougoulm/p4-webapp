@@ -20,21 +20,13 @@ const handler = async (req, res) => {
   const { newsId } = req.query;
 
   if (req.method === "DELETE") {
-    News.findByIdAndRemove(newsId)
+    return News.findByIdAndRemove(newsId)
       .then((news) => {
-        if (news) {
-          res.send({ message: "News has been deleted successfully!" });
-        }
-        return res.status(404).send({
-          message: "News not exist with NewsId" + newsId,
-        });
+        res
+          .status(200)
+          .send({ message: "News has been deleted successfully!" });
       })
       .catch((err) => {
-        if (err.kind === "ObjectId" || err.name === "NotFound") {
-          return res.status(404).send({
-            message: "News not exist with NewsId" + newsId,
-          });
-        }
         return res.status(500).send({
           message:
             "Some error occurred while deleting the news with newsId" + newsId,
@@ -43,4 +35,4 @@ const handler = async (req, res) => {
   }
 };
 
-export default connectDB(handler);
+export default handler;
