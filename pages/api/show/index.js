@@ -7,7 +7,7 @@ import Show from "../../../models/show.model";
 const cors = initMiddleware(
   // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
   Cors({
-    origin: "https://p4-collectif.com",
+    // origin: "https://p4-collectif.com",
     // Only allow requests with GET, POST and OPTIONS
     methods: ["GET", "POST"],
   })
