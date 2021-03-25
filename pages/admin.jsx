@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Admin = ({ newsData, showsData }) => {
-  const [shows, setShows] = useState([]);
+  const [shows, setShows] = useState(JSON.parse(showsData));
   const [news, setNews] = useState(JSON.parse(newsData));
   const [login, setLogin] = useState("");
   const [isAuth, setAuth] = useState(true);
@@ -43,18 +43,10 @@ const Admin = ({ newsData, showsData }) => {
     setNews(result.data);
   }
 
-  // async function fetchShows() {
-  //   const result = await HttpClient.get("/api/show");
-  //   setShows(result.data);
-  // }
-
-  // useEffect(() => {
-  //   try {
-  //     fetchShows();
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // }, []);
+  async function fetchShows() {
+    const result = await HttpClient.get("/api/show");
+    setShows(result.data);
+  }
 
   const createShow = () => {
     HttpClient.post("/api/show", {
@@ -65,14 +57,12 @@ const Admin = ({ newsData, showsData }) => {
       paragraph2: showParagraph2,
       paragraph3: showParagraph3,
       paragraph4: showParagraph4,
-    })
-      .then((res) => {
-        if (res.status === 200) {
-          notify("success-create");
-        }
-        fetchShows();
-      })
-      .catch((err) => console.log(err.toJSON()));
+    }).then((res) => {
+      if (res.status === 200) {
+        notify("success-create");
+      }
+      fetchShows();
+    });
   };
 
   const deleteShow = (showId) => {
@@ -89,12 +79,16 @@ const Admin = ({ newsData, showsData }) => {
       title: newsTitle,
       detail: newsDetail,
       date: newsDate,
-    }).then((res) => {
-      if (res.status === 200) {
-        notify("success-create");
-      }
-      fetchNews();
-    });
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          notify("success-create");
+        }
+        fetchNews();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   const deleteNews = (newsId) => {
@@ -103,7 +97,6 @@ const Admin = ({ newsData, showsData }) => {
         if (res.status === 200) {
           notify("success-delete");
         }
-
         fetchNews();
       })
       .catch((error) => {
@@ -327,12 +320,12 @@ const Admin = ({ newsData, showsData }) => {
 
 export async function getStaticProps() {
   const news = await HttpClient.get("/api/news");
-  // const shows = await HttpClient.get("/api/show");
+  const shows = await HttpClient.get("/api/show");
 
   return {
     props: {
       newsData: JSON.stringify(news.data),
-      // showsData: JSON.stringify(shows.data),
+      showsData: JSON.stringify(shows.data),
     },
   };
 }

@@ -16,6 +16,7 @@ const cors = initMiddleware(
 const handler = async (req, res) => {
   // Run cors
   await cors(req, res);
+  await connectDB();
 
   // HANDLE DELETE
   const { showId } = req.query;
@@ -23,19 +24,12 @@ const handler = async (req, res) => {
   if (req.method === "DELETE") {
     return Show.findByIdAndRemove(showId)
       .then((show) => {
-        if (show) {
-          res.send({ message: "Show has been deleted successfully!" });
-        }
-        return res.status(404).send({
-          message: "Show not exist with showId" + showId,
-        });
+        res
+          .status(200)
+          .send({ message: "Show has been deleted successfully!" });
       })
       .catch((err) => {
-        if (err.kind === "ObjectId" || err.name === "NotFound") {
-          return res.status(404).send({
-            message: "Show not exist with showId" + showId,
-          });
-        }
+        console.log("err", err);
         return res.status(500).send({
           message:
             "Some error occurred while deleting the book with bookId" + showId,
@@ -43,28 +37,28 @@ const handler = async (req, res) => {
       });
   }
 
-  if (req.method === "GET") {
-    // HANDLE GET BY ID
-    return Show.findById(showId)
-      .then((show) => {
-        if (show) {
-          res.send(show);
-        }
-        return res.status(404).send({
-          message: "Show not exist with id " + req.params.showId,
-        });
-      })
-      .catch((err) => {
-        if (err.kind === "ObjectId") {
-          return res.status(404).send({
-            message: "Show not exist with id " + req.params.showId,
-          });
-        }
-        return res.status(500).send({
-          message: "Error retrieving book with id " + req.params.showId,
-        });
-      });
-  }
+  // if (req.method === "GET") {
+  //   // HANDLE GET BY ID
+  //   return Show.findById(showId)
+  //     .then((show) => {
+  //       if (show) {
+  //         res.send(show);
+  //       }
+  //       return res.status(404).send({
+  //         message: "Show not exist with id " + req.params.showId,
+  //       });
+  //     })
+  //     .catch((err) => {
+  //       if (err.kind === "ObjectId") {
+  //         return res.status(404).send({
+  //           message: "Show not exist with id " + req.params.showId,
+  //         });
+  //       }
+  //       return res.status(500).send({
+  //         message: "Error retrieving book with id " + req.params.showId,
+  //       });
+  //     });
+  // }
 };
 
-export default connectDB(handler);
+export default handler;

@@ -16,6 +16,21 @@ const cors = initMiddleware(
 const handler = async (req, res) => {
   // Run cors
   await cors(req, res);
+  await connectDB();
+
+  // HANDLE GET
+  if (req.method === "GET") {
+    return Show.find()
+      .then((show) => {
+        res.send(show);
+      })
+      .catch((err) => {
+        res.status(500).send({
+          message: err.message || "Some error occurred while retrieving shows.",
+        });
+      });
+  }
+
   // HANDLE POST
   if (req.method === "POST") {
     if (!req.body.title) {
@@ -43,23 +58,10 @@ const handler = async (req, res) => {
       .catch((err) => {
         res.status(500).send({
           message:
-            err.message || "Some error occurred while creating the Book.",
-        });
-      });
-  }
-  // HANDLE GET
-  if (req.method === "GET") {
-    return Show.find()
-      .then((show) => {
-        res.send(show);
-      })
-      .catch((err) => {
-        res.status(500).send({
-          message:
-            err.message || "Some error occurred while retrieving the book.",
+            err.message || "Some error occurred while creating the show.",
         });
       });
   }
 };
 
-export default connectDB(handler);
+export default handler;
