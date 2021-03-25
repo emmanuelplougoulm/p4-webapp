@@ -22,7 +22,7 @@ const handler = async (req, res) => {
   if (req.method === "GET") {
     return Show.find()
       .then((show) => {
-        res.send(show);
+        res.status(200).json(show);
       })
       .catch((err) => {
         res.status(500).send({
