@@ -1,7 +1,7 @@
 import Cors from "cors";
 import initMiddleware from "../../../middleware/init-middleware";
 import connectDB from "../../../middleware/mongodb";
-import Show from "../../../models/show.model";
+import Shows from "../../../models/show.model";
 
 // Initialize the cors middleware
 const cors = initMiddleware(
@@ -20,7 +20,7 @@ const handler = async (req, res) => {
 
   // HANDLE GET
   if (req.method === "GET") {
-    return Show.find()
+    return Shows.find()
       .then((shows) => {
         res.status(200).json(shows);
       })
