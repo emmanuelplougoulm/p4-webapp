@@ -19,9 +19,13 @@ const handler = async (req, res) => {
   await connectDB();
 
   if (req.method === "GET") {
-    return News.find().then((news) => {
-      res.status(200).json(news);
-    });
+    return News.find()
+      .then((news) => {
+        res.status(200).json(news);
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
   }
 
   if (req.method === "POST") {
