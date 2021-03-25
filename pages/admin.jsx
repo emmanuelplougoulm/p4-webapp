@@ -7,7 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Admin = ({ newsData, showsData }) => {
   const [shows, setShows] = useState(showsData);
-  const [news, setNews] = useState(newsData);
+  // const [news, setNews] = useState(newsData);
+  const [news, setNews] = useState([]);
   const [login, setLogin] = useState("");
   const [isAuth, setAuth] = useState(true);
 
@@ -38,10 +39,10 @@ const Admin = ({ newsData, showsData }) => {
     }
   };
 
-  async function fetchNews() {
-    const result = await HttpClient.get("/api/news");
-    setNews(result.data);
-  }
+  // async function fetchNews() {
+  //   const result = await HttpClient.get("/api/news");
+  //   setNews(result.data);
+  // }
 
   async function fetchShows() {
     const result = await HttpClient.get("/api/show");
@@ -319,12 +320,12 @@ const Admin = ({ newsData, showsData }) => {
 };
 
 export async function getStaticProps() {
-  const news = await HttpClient.get("/api/news");
+  // const news = await HttpClient.get("/api/news");
   const shows = await HttpClient.get("/api/show");
 
   return {
     props: {
-      newsData: news.data,
+      // newsData: news.data,
       showsData: shows.data,
     },
   };
