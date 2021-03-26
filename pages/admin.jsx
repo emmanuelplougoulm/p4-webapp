@@ -7,11 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Admin = ({ newsData, showsData }) => {
   const [shows, setShows] = useState(showsData);
-  // const [shows, setShows] = useState([]);
   const [news, setNews] = useState(newsData);
-  // const [news, setNews] = useState([]);
   const [login, setLogin] = useState("");
-  const [isAuth, setAuth] = useState(true);
+  const [isAuth, setAuth] = useState(false);
 
   const [showTitle, setShowTitle] = useState("");
   const [showDate, setDate] = useState("");

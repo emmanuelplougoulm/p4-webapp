@@ -23,17 +23,13 @@
   border-top: 1px black solid;
   display: flex;
   justify-content: center;
-  .photo-1 {
-    background-image: url("../public/images/bezos-1.png");
+  .img-container {
+    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     width: 30%;
   }
-  .photo-2 {
-    background-image: url("../public/images/bezos-1.png");
-    background-size: cover;
-    width: 30%;
-  }
+
   .text-container {
     width: 40%;
     display: flex;

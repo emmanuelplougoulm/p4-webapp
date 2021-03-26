@@ -8,10 +8,23 @@ import Link from "next/link";
 import Image from "next/image";
 import HttpClient from "../../http/httpClient";
 
-const Spectacle = () => {
+const Spectacle = ({ showData }) => {
   const router = useRouter();
   const { showId } = router.query;
-  const [show, setShow] = useState();
+  const [show, setShow] = useState(showData);
+  const [background, setBackground] = useState("/images/bezos.png");
+
+  useEffect(() => {
+    if (show) {
+      if (show.title.includes("BEZOS")) setBackground("/images/bezos-1.png");
+      if (show.title.includes("INSOUTENABLES"))
+        setBackground("/images/insoutenables.png");
+      if (show.title.includes("CASTOR"))
+        setBackground("/images/tail-project.png");
+      if (show.title.includes("SOEUR"))
+        setBackground("/images/sister-project.png");
+    }
+  }, [show]);
 
   async function fetchShow() {
     const result = await HttpClient.get(`/api/show/${showId}`);
@@ -40,7 +53,9 @@ const Spectacle = () => {
         <ProjectBanner text={show !== undefined && `${show.title} /`} />
       </div>
       <div className={styles.main}>
-        <div className={styles["photo-1"]}></div>
+        <div className={styles["img-container"]}>
+          <Image src={background} layout="fill" alt="-" />
+        </div>
         <div className={styles["text-container"]}>
           <div className={styles["title"]}>
             {show !== undefined && show.title}
@@ -58,7 +73,9 @@ const Spectacle = () => {
             {show !== undefined && show.paragraph4}
           </div>
         </div>
-        <div className={styles["photo-2"]}></div>
+        <div className={styles["img-container"]}>
+          <Image src={background} layout="fill" alt="-" />
+        </div>{" "}
       </div>
       <div>
         <P4Banner />
