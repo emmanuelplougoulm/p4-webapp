@@ -12,13 +12,13 @@ const Spectacle = ({ showData }) => {
   const router = useRouter();
   const { showId } = router.query;
   const [show, setShow] = useState(showData);
-  const [background, setBackground] = useState("/images/bezos.png");
+  const [background, setBackground] = useState("/images/bezos-1.png");
 
   useEffect(() => {
     if (show) {
       if (show.title.includes("BEZOS")) setBackground("/images/bezos-1.png");
       if (show.title.includes("INSOUTENABLES"))
-        setBackground("/images/insoutenables.png");
+        setBackground("/images/insoutenables-project.png");
       if (show.title.includes("CASTOR"))
         setBackground("/images/tail-project.png");
       if (show.title.includes("SOEUR"))
@@ -44,13 +44,15 @@ const Spectacle = ({ showData }) => {
   return (
     <div className={"site-wrapper"}>
       <div>
-        <P4Banner />
+        <P4Banner speed={3} />
         <div className="backlink-ctn">
           <Link href="/spectacles/spectacles">
             <a className="backlink">{"< SPECTACLES"}</a>
           </Link>
         </div>
-        <ProjectBanner text={show !== undefined && `${show.title} /`} />
+        {show && (
+          <ProjectBanner text={show !== undefined && `${show.title} /`} />
+        )}
       </div>
       <div className={styles.main}>
         <div className={styles["img-container"]}>
@@ -78,7 +80,7 @@ const Spectacle = ({ showData }) => {
         </div>{" "}
       </div>
       <div>
-        <P4Banner />
+        <P4Banner speed={6} />
       </div>
     </div>
   );
