@@ -7,8 +7,6 @@ import Shows from "../../../models/show.model";
 const cors = initMiddleware(
   // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
   Cors({
-    // origin: "https://p4-collectif.com",
-    // Only allow requests with GET, POST and OPTIONS
     methods: ["GET", "POST"],
   })
 );
@@ -37,7 +35,7 @@ const handler = async (req, res) => {
       });
     }
     // Create a Show
-    const show = new Show({
+    const show = new Shows({
       title: req.body.title,
       date: req.body.date,
       detail: req.body.detail,
@@ -50,8 +48,8 @@ const handler = async (req, res) => {
     // Save Show in the database
     return show
       .save()
-      .then((show) => {
-        res.send(show);
+      .then((shows) => {
+        res.send(shows);
       })
       .catch((err) => {
         res.status(500).send({
