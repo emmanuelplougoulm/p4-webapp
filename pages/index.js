@@ -21,75 +21,65 @@ export default function Home() {
       </Head>
 
       <P4Banner speed={3} />
-      {!isMobile && (
-        <main className={styles.main}>
-          <div
-            className={styles.left}
-            onMouseEnter={() => {
-              toggleLeft(!left);
-              toggleRight(!right);
-            }}
-            onMouseLeave={() => {
-              toggleLeft(!left);
-              toggleRight(!right);
-            }}
-          >
-            {/* LEFT PART */}
-            {!left ? (
-              <Link href="/menu">
-                <div style={{ textAlign: "center" }}>
-                  <div className={styles["montserrat-home"]}>
-                    <div className="hoverable">P4</div>
-                  </div>
-                  <div className={styles["lato-home"]}>
-                    <div className="hoverable">COLLECTIF</div>
-                  </div>
+      <main className={styles.main}>
+        <div
+          className={styles.left}
+          onMouseEnter={() => {
+            toggleLeft(!left);
+            toggleRight(!right);
+          }}
+          onMouseLeave={() => {
+            toggleLeft(!left);
+            toggleRight(!right);
+          }}
+        >
+          {/* LEFT PART */}
+          {!left ? (
+            <Link href="/menu">
+              <div style={{ textAlign: "center" }}>
+                <div className={styles["montserrat-home"]}>
+                  <div className="hoverable">P4</div>
                 </div>
-              </Link>
-            ) : (
-              <Link href="/menu">
-                <div className={styles.leftImage}>
-                  <Image
-                    src="/images/home-left.png"
-                    layout="fill"
-                    alt="left-img"
-                  />
+                <div className={styles["lato-home"]}>
+                  <div className="hoverable">COLLECTIF</div>
                 </div>
-              </Link>
-            )}
-          </div>
-          {/* RIGHT PART */}
-          <div className={styles.right}>
-            {right ? (
-              <Link href="/menu">
-                <div>
-                  <Image src="/images/home-right.png" layout="fill" alt="" />
+              </div>
+            </Link>
+          ) : (
+            <Link href="/menu">
+              <div className={styles.leftImage}>
+                <Image
+                  src="/images/home-left.png"
+                  layout="fill"
+                  alt="left-img"
+                />
+              </div>
+            </Link>
+          )}
+        </div>
+        {/* RIGHT PART */}
+        <div className={styles.right}>
+          {right ? (
+            <Link href="/menu">
+              <div>
+                <Image src="/images/home-right.png" layout="fill" alt="" />
+              </div>
+            </Link>
+          ) : (
+            <Link href="/menu">
+              <div style={{ textAlign: "center" }}>
+                <div className={styles["lato-home"]}>
+                  <div className={styles.hoverable}>THÉATRE &</div>
                 </div>
-              </Link>
-            ) : (
-              <Link href="/menu">
-                <div style={{ textAlign: "center" }}>
-                  <div className={styles["lato-home"]}>
-                    <div className={styles.hoverable}>THÉATRE &</div>
-                  </div>
-                  <div className={styles["montserrat-home"]}>
-                    <div className={styles.hoverable}> IMMERSION</div>
-                  </div>
+                <div className={styles["montserrat-home"]}>
+                  <div className={styles.hoverable}> IMMERSION</div>
                 </div>
-              </Link>
-            )}
-          </div>
-        </main>
-      )}
-      {/* MOBILE PART */}
-      {isMobile && (
-        <Link href="/menu">
-          <div className={styles["home-mobile"]}>
-            <div className={styles["montserrat-mobile"]}>P4</div>
-            <div className={styles["lato-mobile"]}>COLLECTIF</div>
-          </div>
-        </Link>
-      )}
+              </div>
+            </Link>
+          )}
+        </div>
+      </main>
+
       <P4Banner speed={6} />
     </div>
   );
