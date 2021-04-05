@@ -73,6 +73,27 @@ const Spectacle = ({ showData }) => {
             {show !== undefined && show.paragraph3}
             <br /> <br />
             {show !== undefined && show.paragraph4}
+            {show && show.title.includes("CASTOR") && (
+              <iframe
+                src="https://player.vimeo.com/video/505564858"
+                // width="640"
+                // height="360"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            )}
+            {show && show.title.includes("SOEUR") && (
+              <iframe
+                title="vimeo-player"
+                src="https://player.vimeo.com/video/509780969"
+                // width="640"
+                // height="360"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            )}
           </div>
         </div>
         <div className={styles["img-container"]}>
