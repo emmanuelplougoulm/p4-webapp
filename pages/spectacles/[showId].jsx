@@ -64,6 +64,7 @@ const Spectacle = ({ showData }) => {
           </div>
           <div className={styles["paragraph"]}>
             {show !== undefined && show.detail}
+            &nbsp;
             <strong>{show !== undefined && show.date}</strong> <br />
             <br />
             {show !== undefined && show.paragraph1}

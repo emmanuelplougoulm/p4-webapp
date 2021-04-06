@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap");
+
 .container {
   height: 40px;
   align-items: center;
   border-bottom: 1px black solid;
+  font-family: "Montserrat";
   .wrapper {
     display: flex;
     flex-direction: row;

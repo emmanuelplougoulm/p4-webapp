@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap");
+
 .main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-grow: 1;
+  font-family: "Montserrat";
   .left {
     .link > a {
       text-decoration: none;
