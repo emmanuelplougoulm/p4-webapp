@@ -9,57 +9,14 @@ import HttpClient from "../../http/httpClient";
 
 const Spectacles = () => {
   const history = useHistory();
-  const [shows, setShows] = useState([]);
-  const [activeShow, setActiveShow] = useState("");
-  const [background, setBackground] = useState("/images/bezos.png");
-
-  const findImage = () => {
-    if (activeShow.includes("BEZOS")) setBackground("/images/bezos.png");
-    if (activeShow.includes("INSOUTENABLES"))
-      setBackground("/images/insoutenables.png");
-    if (activeShow.includes("CASTOR")) setBackground("/images/tail.png");
-    if (activeShow.includes("SOEUR")) setBackground("/images/masoeur.png");
-    else return;
-  };
-
-  useEffect(() => {
-    findImage();
-  }, [activeShow]);
-
-  async function fetchShows() {
-    const result = await HttpClient.get("/api/show");
-    setShows(result.data);
-  }
-
-  useEffect(() => {
-    try {
-      fetchShows();
-    } catch (e) {
-      console.error(e);
-    }
-  }, []);
-
-  const showList = shows.map((item, index) => {
-    return (
-      <div key={index} className={styles["project-container"]}>
-        <div
-          className={styles["title"]}
-          onMouseEnter={() => setActiveShow(item.title)}
-        >
-          <Link href={`/spectacles/${item._id}`}>
-            <a className={styles.link}>{item.title}</a>
-          </Link>
-        </div>
-      </div>
-    );
-  });
+  const [background, setBackground] = useState("/images/bezos.gif");
 
   return (
     <div className={"site-wrapper"}>
       <div>
         <P4Banner speed={7} />
         <div className="backlink-ctn">
-          <Link href="/menu">
+          <Link href="/">
             <a className="backlink">{"< MENU"}</a>
           </Link>
         </div>
@@ -67,7 +24,56 @@ const Spectacles = () => {
       </div>
 
       <main className={styles.main}>
-        <div className={styles.left}>{showList}</div>
+        <div className={styles.left}>
+          <div className={styles["project-container"]}>
+            <div
+              className={styles["title"]}
+              onMouseEnter={() => setBackground("/images/bezos.gif")}
+            >
+              <Link href={`/spectacles/bezos`}>
+                <a className={styles.link}>J'AURAIS VOULU ÊTRE JEFF BEZOS</a>
+              </Link>
+            </div>
+
+            <div
+              className={styles["title"]}
+              onMouseEnter={() => setBackground("/images/door.png")}
+            >
+              <Link href={`/spectacles/door`}>
+                <a className={styles.link}>LE DERNIER FERME LA PORTE</a>
+              </Link>
+            </div>
+            <div
+              className={styles["title"]}
+              onMouseEnter={() => setBackground("/images/tail.png")}
+            >
+              <Link href={`/spectacles/tail`}>
+                <a className={styles.link}>
+                  SEULE LA QUEUE DU CASTOR PEUT TARIR LA RIVIÈRE
+                </a>
+              </Link>
+            </div>
+            <div
+              className={styles["title"]}
+              onMouseEnter={() => setBackground("/images/masoeur.png")}
+            >
+              <Link href={`/spectacles/soeur`}>
+                <a className={styles.link}>
+                  MA SOEUR, TES LÈVRES SONT DE PORCELAINE
+                </a>
+              </Link>
+            </div>
+            <div
+              className={styles["title"]}
+              onMouseEnter={() => setBackground("/images/insoutenables.png")}
+            >
+              <Link href={`/spectacles/insoutenables`}>
+                <a className={styles.link}>INSOUTENABLES LONGUES ÉTREINTES</a>
+              </Link>
+            </div>
+          </div>
+        </div>
+
         <div className={styles["bg-container"]}>
           <Image src={background} layout="fill" alt="-" />
         </div>

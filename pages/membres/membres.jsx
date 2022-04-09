@@ -9,7 +9,7 @@ const Members = () => {
       <div>
         <P4Banner />
         <div className="backlink-ctn">
-          <Link href="/menu">
+          <Link href="/">
             <a className="backlink">{"< MENU"}</a>
           </Link>
         </div>

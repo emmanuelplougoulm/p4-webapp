@@ -8,19 +8,6 @@ import HttpClient from "../http/httpClient";
 const Actus = () => {
   const [news, setNews] = useState([]);
 
-  async function fetchNews() {
-    const result = await HttpClient.get("/api/news");
-    setNews(result.data);
-  }
-
-  useEffect(() => {
-    try {
-      fetchNews();
-    } catch (e) {
-      console.error(e);
-    }
-  }, []);
-
   const newsList = news.map((item, index) => {
     return (
       <div key={index} className={styles["post-container"]}>
@@ -36,7 +23,7 @@ const Actus = () => {
       <div>
         <P4Banner />
         <div className="backlink-ctn">
-          <Link href="/menu">
+          <Link href="/">
             <a className="backlink">{"< MENU"}</a>
           </Link>
         </div>
@@ -44,7 +31,32 @@ const Actus = () => {
       </div>
 
       <main className={styles.main}>
-        <div className={styles.left}>{newsList}</div>
+        <div className={styles.left}>
+          <div className={styles["post-container"]}>
+            <div className={styles["title"]}>
+              * Nouvelle création Immersive en cours
+            </div>
+            <div className={styles["detail"]}> France / été 2022</div>
+          </div>
+          <div className={styles["post-container"]}>
+            <div className={styles["title"]}>* Chantiers Divers et Variés.</div>
+          </div>
+          <div className={styles["post-container"]}>
+            <div className={styles["title"]}>
+              * J’aurais voulu être Jeff Bezos{" "}
+            </div>
+            <div className={styles["detail"]}>
+              {" "}
+              se jouera au théâtre de Belleville en février 2023.
+            </div>
+            <div className={styles["detail"]}>
+              {" "}
+              + Mention spéciale du jury Prix Jeunes metteurs en scène du
+              Théâtre 13 2021 
+            </div>
+          </div>
+        </div>
+
         <div className={styles.right}>
           <Image src="/images/actualites.jpg" layout="fill" />
         </div>
