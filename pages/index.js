@@ -19,11 +19,10 @@ const Menu = () => {
             <div className={styles.lato}>P4</div>
           </h1>
           <h3>
-            {/*TODO*/}
-            <div className={styles.montserrat}>
-              Collectif tout-terrain racontant des histoires avec un filtre de
-              poésie, d'humour, de rage et de folie.Pour un théâtre en salle et
-              ailleurs, pour tout le monde.
+            <div className={styles["description"]}>
+              Collectif tout-terrain racontant des histoires avec un filtre{" "}
+              <br /> de poésie, d'humour, de rage et de folie. <br /> Pour un
+              théâtre en salle et ailleurs, pour tout le monde.
             </div>
           </h3>
         </div>
@@ -32,17 +31,17 @@ const Menu = () => {
             <Image src="/images/photos/image5.jpeg" layout="fill" alt="" />
           </div>
           <div className={styles["nav-wrapper"]}>
-            <Link href="/spectacles/spectacles">
-              <a className={styles["nav-item"]}>Spectacles</a>
+            <Link className={styles["nav-item"]} href="/spectacles/spectacles">
+              Spectacles
             </Link>
-            <Link href="membres/membres">
-              <a className={styles["nav-item"]}>Membres</a>
+            <Link className={styles["nav-item"]} href="membres/membres">
+              Membres
             </Link>
-            <Link href="/actus">
-              <a className={styles["nav-item"]}>Actualités</a>
+            <Link className={styles["nav-item"]} href="/actus">
+              Actualités
             </Link>
-            <Link href="/contact">
-              <a className={styles["nav-item"]}>Contact</a>
+            <Link className={styles["nav-item"]} href="/contact">
+              Contact
             </Link>
           </div>
         </section>

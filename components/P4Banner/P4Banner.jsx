@@ -1,10 +1,10 @@
 import styles from "./P4Banner.module.scss";
-import Ticker from "react-ticker";
+// import Ticker from "react-ticker";
 
 const P4Banner = ({ speed }) => {
   return (
     <div className={styles.container}>
-      <Ticker speed={speed}>
+      {/* <Ticker speed={speed}>
         {({ index }) => (
           <>
             <div className={styles.wrapper}>
@@ -13,7 +13,7 @@ const P4Banner = ({ speed }) => {
             </div>
           </>
         )}
-      </Ticker>
+      </Ticker> */}
     </div>
   );
 };

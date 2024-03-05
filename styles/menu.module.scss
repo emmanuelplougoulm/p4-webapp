@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-// #262626
-
 .main {
   font-family: "Montserrat";
   display: flex;
@@ -11,21 +9,21 @@
   justify-content: space-between;
   .upper-section {
     display: flex;
-    display: -webkit-flex;
-    display: -webkit-box;
-    display: -moz-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
+    // display: -webkit-flex;
+    // display: -webkit-box;
+    // display: -moz-flex;
+    // display: -moz-box;
+    // display: -ms-flexbox;
     flex-direction: column;
     flex: 1 1 auto;
     .h1 {
       font-size: 16px;
-      flex-grow: 1;
+      // flex-grow: 1;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin: 40px;
+      // margin: 40px;
       font-family: "Montserrat";
       font-weight: 100;
       text-transform: uppercase;
@@ -40,6 +38,19 @@
         font-size: 9.375em;
         font-family: "Lato";
         font-weight: 300;
+      }
+    }
+    h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .description {
+        display: flex;
+        justify-content: center;
+        width: 600px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 20px;
       }
     }
     .h2 {

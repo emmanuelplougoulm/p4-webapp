@@ -1,6 +1,6 @@
 {
   "name": "p4-webapp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,19 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.6.7",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.1",
-    "next": "10.0.8",
+    "next": "^14.1.2",
     "next-images": "^1.7.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-responsive": "^8.2.0",
     "react-router-dom": "^5.2.0",
-    "react-ticker": "^1.2.2",
     "react-toastify": "^7.0.3",
     "sass": "^1.32.8"
   },

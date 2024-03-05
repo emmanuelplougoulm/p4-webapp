@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "../../styles/projectBanner.module.scss";
-import Ticker from "react-ticker";
+// import Ticker from "react-ticker";
 
 const ProjectBanner = ({ text }) => {
   return (
     <div className={styles.container}>
-      <Ticker>
+      {/* <Ticker>
         {({ index }) => (
           <>
             <div className={styles.wrapper}>
@@ -13,7 +13,7 @@ const ProjectBanner = ({ text }) => {
             </div>
           </>
         )}
-      </Ticker>
+      </Ticker> */}
     </div>
   );
 };

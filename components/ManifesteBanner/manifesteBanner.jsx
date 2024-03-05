@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/manifesteBanner.module.scss";
-import Ticker from "react-ticker";
+// import Ticker from "react-ticker";
 
 // interface IProps {
 //   direction?: string;
@@ -10,7 +10,7 @@ import Ticker from "react-ticker";
 const MBanner = ({ direction }) => {
   return (
     <div className={styles.container}>
-      <Ticker
+      {/* <Ticker
         mode="chain"
         offset="-5"
         speed={5}
@@ -21,7 +21,7 @@ const MBanner = ({ direction }) => {
             <p className={styles.text}> Manifeste </p>
           </div>
         )}
-      </Ticker>
+      </Ticker> */}
     </div>
   );
 };

@@ -23,8 +23,8 @@ const Actus = () => {
       <div>
         {/* <P4Banner /> */}
         <div className="backlink-ctn">
-          <Link href="/">
-            <a className="backlink">{"< MENU"}</a>
+          <Link className="backlink" href="/">
+            {"< MENU"}
           </Link>
         </div>
         <div className="section-title">Actualités</div>
