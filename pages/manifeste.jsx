@@ -5,8 +5,10 @@ import P4Banner from "../components/P4Banner/P4Banner";
 import Image from "next/image";
 import HttpClient from "../http/httpClient";
 
-const Actus = () => {
+const Manifeste = () => {
   const [news, setNews] = useState([]);
+
+  // TDOD
 
   const newsList = news.map((item, index) => {
     return (

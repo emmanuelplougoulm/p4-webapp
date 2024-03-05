@@ -11,7 +11,7 @@ const Tail = () => {
   return (
     <div className={"site-wrapper"}>
       <div>
-        <P4Banner speed={3} />
+        {/* <P4Banner speed={3} /> */}
         <div className="backlink-ctn">
           <Link href="/spectacles/spectacles">
             <a className="backlink">{"< SPECTACLES"}</a>
@@ -50,9 +50,7 @@ const Tail = () => {
             déglingué, camping abandonné, chemins sinueux, voiture, vieux
             camping car et forêt.
             <br />
-            <br /> Le spectacle se joue à la tombée de la nuit et dans la nuit
-            noire, donnant teintes et ambiances différentes à ce spectacle.
-            <br /> <br />
+            <br />
           </div>
         </div>
         <div className={styles["img-container"]}>
@@ -61,9 +59,7 @@ const Tail = () => {
           <img src={"/images/tail.png"} alt="-" />
         </div>{" "}
       </div>
-      <div>
-        <P4Banner speed={6} />
-      </div>
+      <div>{/* <P4Banner speed={6} /> */}</div>
     </div>
   );
 };

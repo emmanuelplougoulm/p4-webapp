@@ -7,7 +7,7 @@ const Members = () => {
   return (
     <div className={"site-wrapper"}>
       <div>
-        <P4Banner />
+        {/* <P4Banner /> */}
         <div className="backlink-ctn">
           <Link href="/">
             <a className="backlink">{"< MENU"}</a>
@@ -84,14 +84,6 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/benjamin">
-            <div className={styles["item-container"]}>
-              <div className={styles["item-name"]}>Benjamin Kühn / &nbsp; </div>
-              <div className={styles["item-role"]}> Comédien, réalisateur</div>
-            </div>
-          </Link>
-        </div>
-        <div className={styles["list-container"]}>
           <Link href="/membres/anais">
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>Anaïs Ancel / &nbsp; </div>
@@ -100,10 +92,13 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/lison">
+          <Link href="/membres/claire">
             <div className={styles["item-container"]}>
-              <div className={styles["item-name"]}>Lison Rault / &nbsp; </div>
-              <div className={styles["item-role"]}> Comédienne</div>
+              <div className={styles["item-name"]}>Claire Olier / &nbsp; </div>
+              <div className={styles["item-role"]}>
+                {" "}
+                Comédienne, metteuse en scène
+              </div>
             </div>
           </Link>
         </div>
@@ -137,7 +132,7 @@ const Members = () => {
           </Link>
         </div>
       </main>
-      <P4Banner />
+      {/* <P4Banner /> */}
     </div>
   );
 };

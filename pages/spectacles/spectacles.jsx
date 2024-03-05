@@ -14,7 +14,7 @@ const Spectacles = () => {
   return (
     <div className={"site-wrapper"}>
       <div>
-        <P4Banner speed={7} />
+        {/* <P4Banner speed={7} /> */}
         <div className="backlink-ctn">
           <Link href="/">
             <a className="backlink">{"< MENU"}</a>
@@ -28,7 +28,7 @@ const Spectacles = () => {
           <div className={styles["project-container"]}>
             <div
               className={styles["title"]}
-              onMouseEnter={() => setBackground("/images/bezos.gif")}
+              onMouseEnter={() => setBackground("/images/photos/image1.jpeg")}
             >
               <Link href={`/spectacles/bezos`}>
                 <a className={styles.link}>J'AURAIS VOULU ÊTRE JEFF BEZOS</a>
@@ -78,7 +78,7 @@ const Spectacles = () => {
           <Image src={background} layout="fill" alt="-" />
         </div>
       </main>
-      <P4Banner />
+      {/* <P4Banner /> */}
     </div>
   );
 };

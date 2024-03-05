@@ -13,15 +13,23 @@ const Menu = () => {
       {!isMobile && <header className="header"></header>}
       <main className={styles.main}>
         <div className={styles["upper-section"]}>
-          <P4Banner />
+          {/*<P4Banner />*/}
           <h1 className={styles.h1}>
-            <div className={styles.montserrat}>P4 </div>
-            <div className={styles.lato}>collectif</div>
+            <div className={styles.montserrat}>Collectif</div>
+            <div className={styles.lato}>P4</div>
           </h1>
+          <h3>
+            {/*TODO*/}
+            <div className={styles.montserrat}>
+              Collectif tout-terrain racontant des histoires avec un filtre de
+              poésie, d'humour, de rage et de folie.Pour un théâtre en salle et
+              ailleurs, pour tout le monde.
+            </div>
+          </h3>
         </div>
         <section className={styles["section"]}>
           <div className={styles["img-container"]}>
-            <Image src="/images/entrance1.png" layout="fill" alt="" />
+            <Image src="/images/photos/image5.jpeg" layout="fill" alt="" />
           </div>
           <div className={styles["nav-wrapper"]}>
             <Link href="/spectacles/spectacles">

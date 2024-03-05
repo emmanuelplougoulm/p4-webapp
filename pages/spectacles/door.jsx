@@ -12,7 +12,7 @@ const Door = () => {
   return (
     <div className={"site-wrapper"}>
       <div>
-        <P4Banner speed={3} />
+        {/* <P4Banner speed={3} /> */}
         <div className="backlink-ctn">
           <Link href="/spectacles/spectacles">
             <a className="backlink">{"< SPECTACLES"}</a>
@@ -30,7 +30,7 @@ const Door = () => {
           <div className={styles["title"]}>LE DERNIER FERME LA PORTE</div>
           <div className={styles["paragraph"]}>
             Le couvent Levat – Spectacle joué à
-            <strong>Marseille – Août 2021</strong>
+            <strong> Marseille – Août 2021</strong>
             <br />
             <iframe
               width="510"
@@ -41,6 +41,14 @@ const Door = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            {/* TODO */}
+            <div>
+              Une élue à la culture accueille le public venu voir la nouvelle
+              création du collectif. Le spectacle n'est pas prêt. Elle est
+              kidnappée pour être offerte en sacrifice. La troupe est en fait
+              une secte complètement givrée. Un couvent, un jardin, des
+              couloirs, une chapelle.
+            </div>
           </div>
         </div>
         <div className={styles["img-container"]}>
@@ -49,9 +57,7 @@ const Door = () => {
           <img src="/images/door.png" alt="-" />
         </div>{" "}
       </div>
-      <div>
-        <P4Banner speed={6} />
-      </div>
+      <div>{/* <P4Banner speed={6} /> */}</div>
     </div>
   );
 };

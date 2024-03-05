@@ -48,9 +48,9 @@
       "Cie luce"
     ]
   },
-  "romain": {
-    "name": "Romain Blanchard",
-    "position": "Comédien",
+  "roma": {
+    "name": "Roma Blanchard",
+    "position": "Comédien, Drag Queen",
     "infos": [
       "Conservatoire de Genève",
       "Conservatoire de Lyon",
@@ -113,16 +113,10 @@
       "Téléfilms (TF1, FR2, CANAL PLUS), clips, publicité"
     ]
   },
-  "lison": {
-    "name": "Lison Rault",
-    "position": "Comédienne",
-    "infos": [
-      "Licence médiation culturelle",
-      "Conservatoire Cergy-Pontoise",
-      "Conservatoire de Montpellier (ENSAD)",
-      "Cie Tire pas la nape",
-      "Ateliers Medicis (création Radiophonique)"
-    ]
+  "claire": {
+    "name": "Claire Olier",
+    "position": "  Comédienne, metteuse en scène",
+    "infos": ["Conservatoire du 11e (Paris)", "Cie luce", "Cie 5ème acte"]
   },
   "regis": {
     "name": "Régis Fortino",
@@ -148,7 +142,7 @@
       "Manufacture de Lausanne / Compagnie Boule à facettes",
       "On achève bien les oiseaux / Festival Fragments",
       "Mon petit monde porno, de Gabriel Calderón",
-      "Compagnie COMPLOT (Uruguay)",
+      "Cie COMPLOT (Uruguay)",
       "National d'Arts Scéniques de Montevideo",
       "Mains d'Oeuvres / Innocence de Dea Loher",
       "Festival in situ de Villeréal",
