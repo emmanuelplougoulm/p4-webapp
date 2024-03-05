@@ -2,76 +2,30 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/actus.module.scss";
 import Link from "next/link";
 import P4Banner from "../components/P4Banner/P4Banner";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import HttpClient from "../http/httpClient";
 
 const Manifeste = () => {
-  const [news, setNews] = useState([]);
-
-  // TDOD
-
-  const newsList = news.map((item, index) => {
-    return (
-      <div key={index} className={styles["post-container"]}>
-        <div className={styles["title"]}>{item.title}</div>
-        <div className={styles["detail"]}>{item.detail}</div>
-        <div className={styles["date"]}>{item.date}</div>
-      </div>
-    );
-  });
-
   return (
-    <div className={"site-wrapper"}>
-      <div>
-        {/* <P4Banner /> */}
-        <div className="backlink-ctn">
-          <Link href="/">
-            <a className="backlink">{"< MENU"}</a>
-          </Link>
-        </div>
-        <div className="section-title">Actualités</div>
-      </div>
-
-      <main className={styles.main}>
-        <div className={styles.left}>
-          <div className={styles["post-container"]}>
-            <div>
-              Avignon 2024 - Le 11 25 mai 2024 : Festival de Coye-la-forêt
-              Février et Octobre 2023 : Théâtre de Belleville Création in situ &
-              immersive :  Avril 24 : Théâtre de l'Oeuvre - Marseille Juillet
-              2024 : Avignon 2024 à suivre
-            </div>
-            <div className={styles["title"]}>
-              * Nouvelle création Immersive en cours
-            </div>
-            <div className={styles["detail"]}> France / été 2022</div>
-          </div>
-          <div className={styles["post-container"]}>
-            <div className={styles["title"]}>* Chantiers Divers et Variés.</div>
-          </div>
-          <div className={styles["post-container"]}>
-            <div className={styles["title"]}>
-              * J’aurais voulu être Jeff Bezos{" "}
-            </div>
-            <div className={styles["detail"]}>
-              {" "}
-              se jouera au théâtre de Belleville en février 2023.
-            </div>
-            <div className={styles["detail"]}>
-              {" "}
-              + Mention spéciale du jury Prix Jeunes metteurs en scène du
-              Théâtre 13 2021 
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.right}>
-          <Image src="/images/actualites.jpg" layout="fill" />
-        </div>
-      </main>
-      {/* <P4Banner /> */}
+    <div className={"manifeste"}>
+      P4 pour un paquet de quatre cigarettes, pour un laboratoire de recherche
+      de haute sécurité, pour une incompatibilité avec la poursuite du service
+      militaire ou un véhicule léger. Le collectif P4 fait du théâtre, en salle
+      et ailleurs, et pour tout le monde. P4 croit en l'esprit de camaraderie et
+      à la confrontation d'idées. P4 écrit des spectacles pour la salle et pour
+      les lieux qui l'invite durant des temps de résidences courts. P4 veut
+      seulement raconter des histoires, hors des sentiers rebattus, avec sa
+      générosité et son appétit pour le jeu.
+      <br /> <br /> "Le fossé entre le théâtre pauvre et le théâtre riche est
+      encore élargi, la classe moyenne du théâtre disparaît, un peu d’argent ne
+      suffit plus, il en faut beaucoup ou alors, quoi, rien. Il faut trouver
+      l’esthétique de ce rien. Qui n’est pas du tout rien, puisqu’il y a les
+      acteurs, porteurs de la totalité des signes du spectacle".
+      <br />
+      <br />
+      A.Vittez
     </div>
   );
 };
 
-export default Actus;
+export default Manifeste;

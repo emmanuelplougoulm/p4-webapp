@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/actus.module.scss";
 import Link from "next/link";
 import P4Banner from "../components/P4Banner/P4Banner";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import HttpClient from "../http/httpClient";
 
 const Actus = () => {
@@ -21,9 +21,8 @@ const Actus = () => {
   return (
     <div className={"site-wrapper"}>
       <div>
-        {/* <P4Banner /> */}
         <div className="backlink-ctn">
-          <Link className="backlink" href="/">
+          <Link className="backlink" href="/" legacyBehavior>
             {"< MENU"}
           </Link>
         </div>
@@ -33,41 +32,38 @@ const Actus = () => {
       <main className={styles.main}>
         <div className={styles.left}>
           <div className={styles["post-container"]}>
-            <div>
-              Avignon 2024 - Le 11 25 mai 2024 : Festival de Coye-la-forêt
-              Février et Octobre 2023 : Théâtre de Belleville Création in situ &
-              immersive :  Avril 24 : Théâtre de l'Oeuvre - Marseille Juillet
-              2024 : Avignon 2024 à suivre
-            </div>
             <div className={styles["title"]}>
-              * Nouvelle création Immersive en cours
-            </div>
-            <div className={styles["detail"]}> France / été 2022</div>
-          </div>
-          <div className={styles["post-container"]}>
-            <div className={styles["title"]}>* Chantiers Divers et Variés.</div>
-          </div>
-          <div className={styles["post-container"]}>
-            <div className={styles["title"]}>
-              * J’aurais voulu être Jeff Bezos{" "}
+              J'aurais voulu être Jeff Bezos
             </div>
             <div className={styles["detail"]}>
               {" "}
-              se jouera au théâtre de Belleville en février 2023.
+              Avignon 2024 - Le 11 Juin 2024
             </div>
             <div className={styles["detail"]}>
               {" "}
-              + Mention spéciale du jury Prix Jeunes metteurs en scène du
-              Théâtre 13 2021 
+              Théâtre de l'oeuvre Marseille 25 mai 2024{" "}
+            </div>
+            <div className={styles["detail"]}>
+              {" "}
+              Festival de Coye-la-forêt Février et Octobre 2023
+            </div>
+            <div className={styles["detail"]}> Théâtre de Belleville</div>
+          </div>
+          <div className={styles["post-container"]}>
+            <div className={styles["title"]}>Création in situ & immersive</div>
+            <div className={styles["detail"]}>
+              Avril 24 : Théâtre de l'Oeuvre - Marseille
+            </div>
+            <div className={styles["detail"]}>
+              Juillet 24: Avignon 2024 a suivre.
             </div>
           </div>
         </div>
 
         <div className={styles.right}>
-          <Image src="/images/actualites.jpg" layout="fill" />
+          <img src="/images/photos/guili.jpg" layout="fill" />
         </div>
       </main>
-      {/* <P4Banner /> */}
     </div>
   );
 };

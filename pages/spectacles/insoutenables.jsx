@@ -5,7 +5,7 @@ import ProjectBanner from "../../components/ProjectBanner/ProjectBanner";
 import { useHistory } from "react-router-dom";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import HttpClient from "../../http/httpClient";
 
 const Insoutenables = () => {
@@ -14,8 +14,8 @@ const Insoutenables = () => {
       <div>
         <P4Banner speed={3} />
         <div className="backlink-ctn">
-          <Link href="/spectacles/spectacles">
-            <a className="backlink">{"< SPECTACLES"}</a>
+          <Link href="/spectacles/spectacles" className="backlink">
+            {"< SPECTACLES"}
           </Link>
         </div>
         <ProjectBanner text={`INSOUTENABLES LONGUES ÉTREINTES /`} />

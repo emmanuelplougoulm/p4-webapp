@@ -4,7 +4,7 @@ import Link from "next/link";
 import P4Banner from "../components/P4Banner/P4Banner.jsx";
 import FunnyBanner from "../components//FunnyBanner/FunnyBanner.jsx";
 import { useMediaQuery } from "react-responsive";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Menu = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
@@ -28,17 +28,20 @@ const Menu = () => {
         </div>
         <section className={styles["section"]}>
           <div className={styles["img-container"]}>
-            <Image src="/images/photos/image5.jpeg" layout="fill" alt="" />
+            <img src="/images/photos/image5.jpeg" />
           </div>
           <div className={styles["nav-wrapper"]}>
+            <Link className={styles["nav-item"]} href="/manifeste">
+              Manifeste
+            </Link>
+            <Link className={styles["nav-item"]} href="/actus">
+              Actualités
+            </Link>
             <Link className={styles["nav-item"]} href="/spectacles/spectacles">
               Spectacles
             </Link>
             <Link className={styles["nav-item"]} href="membres/membres">
               Membres
-            </Link>
-            <Link className={styles["nav-item"]} href="/actus">
-              Actualités
             </Link>
             <Link className={styles["nav-item"]} href="/contact">
               Contact

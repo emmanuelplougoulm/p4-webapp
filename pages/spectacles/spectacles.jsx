@@ -4,20 +4,19 @@ import P4Banner from "../../components/P4Banner/P4Banner";
 import ProjectsBanner from "../../components/ProjectBanner/ProjectBanner";
 import { useHistory } from "react-router-dom";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import HttpClient from "../../http/httpClient";
 
 const Spectacles = () => {
   const history = useHistory();
-  const [background, setBackground] = useState("/images/bezos.gif");
+  const [background, setBackground] = useState("/images/photos/image1.jpeg");
 
   return (
     <div className={"site-wrapper"}>
       <div>
-        {/* <P4Banner speed={7} /> */}
         <div className="backlink-ctn">
-          <Link href="/">
-            <a className="backlink">{"< MENU"}</a>
+          <Link href="/" className="backlink">
+            {"< MENU"}
           </Link>
         </div>
         <div className="section-title">Spectacles</div>
@@ -30,8 +29,8 @@ const Spectacles = () => {
               className={styles["title"]}
               onMouseEnter={() => setBackground("/images/photos/image1.jpeg")}
             >
-              <Link href={`/spectacles/bezos`}>
-                <a className={styles.link}>J'AURAIS VOULU ÊTRE JEFF BEZOS</a>
+              <Link href={`/spectacles/bezos`} className={styles.link}>
+                J'AURAIS VOULU ÊTRE JEFF BEZOS
               </Link>
             </div>
 
@@ -39,36 +38,32 @@ const Spectacles = () => {
               className={styles["title"]}
               onMouseEnter={() => setBackground("/images/door.png")}
             >
-              <Link href={`/spectacles/door`}>
-                <a className={styles.link}>LE DERNIER FERME LA PORTE</a>
+              <Link href={`/spectacles/door`} className={styles.link}>
+                LE DERNIER FERME LA PORTE
               </Link>
             </div>
             <div
               className={styles["title"]}
               onMouseEnter={() => setBackground("/images/tail.png")}
             >
-              <Link href={`/spectacles/tail`}>
-                <a className={styles.link}>
-                  SEULE LA QUEUE DU CASTOR PEUT TARIR LA RIVIÈRE
-                </a>
+              <Link href={`/spectacles/tail`} className={styles.link}>
+                SEULE LA QUEUE DU CASTOR PEUT TARIR LA RIVIÈRE
               </Link>
             </div>
             <div
               className={styles["title"]}
               onMouseEnter={() => setBackground("/images/masoeur.png")}
             >
-              <Link href={`/spectacles/soeur`}>
-                <a className={styles.link}>
-                  MA SOEUR, TES LÈVRES SONT DE PORCELAINE
-                </a>
+              <Link href={`/spectacles/soeur`} className={styles.link}>
+                MA SOEUR, TES LÈVRES SONT DE PORCELAINE
               </Link>
             </div>
             <div
               className={styles["title"]}
               onMouseEnter={() => setBackground("/images/insoutenables.png")}
             >
-              <Link href={`/spectacles/insoutenables`}>
-                <a className={styles.link}>INSOUTENABLES LONGUES ÉTREINTES</a>
+              <Link href={`/spectacles/insoutenables`} className={styles.link}>
+                INSOUTENABLES LONGUES ÉTREINTES
               </Link>
             </div>
           </div>
@@ -78,7 +73,6 @@ const Spectacles = () => {
           <Image src={background} layout="fill" alt="-" />
         </div>
       </main>
-      {/* <P4Banner /> */}
     </div>
   );
 };

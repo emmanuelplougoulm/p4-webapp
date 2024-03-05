@@ -7,17 +7,16 @@ const Members = () => {
   return (
     <div className={"site-wrapper"}>
       <div>
-        {/* <P4Banner /> */}
         <div className="backlink-ctn">
-          <Link href="/">
-            <a className="backlink">{"< MENU"}</a>
+          <Link href="/" className="backlink">
+            {"< MENU"}
           </Link>
         </div>
       </div>
       <main className={styles.main}>
         <div className={styles.title}>Membres : </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/chloe">
+          <Link href="/membres/chloe" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>Chloé Chycki / &nbsp; </div>
               <div className={styles["item-role"]}> Comédienne, clown</div>
@@ -25,7 +24,7 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/pauline">
+          <Link href="/membres/pauline" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>
                 Pauline Laurendeau / &nbsp;{" "}
@@ -35,7 +34,7 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/mathias">
+          <Link href="/membres/mathias" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>Mathias Minne / &nbsp; </div>
               <div className={styles["item-role"]}> Comédien, réalisateur</div>
@@ -43,7 +42,7 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/arthur">
+          <Link href="/membres/arthur" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>
                 Arthur Viadieu / &nbsp;{" "}
@@ -53,17 +52,17 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/romain">
+          <Link href="/membres/romain" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>
-                Romain Blanchard / &nbsp;{" "}
+                Roma Blanchard / &nbsp;{" "}
               </div>
               <div className={styles["item-role"]}> Comédien</div>
             </div>
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/marieline">
+          <Link href="/membres/marieline" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>
                 Marie-Line Vergnaux / &nbsp;{" "}
@@ -76,7 +75,7 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/bob">
+          <Link href="/membres/bob" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>Bob Levasseur / &nbsp; </div>
               <div className={styles["item-role"]}> Comédien</div>
@@ -84,7 +83,7 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/anais">
+          <Link href="/membres/anais" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>Anaïs Ancel / &nbsp; </div>
               <div className={styles["item-role"]}> Comédienne, clown</div>
@@ -92,7 +91,7 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/claire">
+          <Link href="/membres/claire" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>Claire Olier / &nbsp; </div>
               <div className={styles["item-role"]}>
@@ -103,7 +102,7 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/regis">
+          <Link href="/membres/regis" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>Régis Fortino / &nbsp; </div>
               <div className={styles["item-role"]}> Comédien</div>
@@ -111,7 +110,7 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/sarah">
+          <Link href="/membres/sarah" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>Sarah Calcine / &nbsp; </div>
               <div className={styles["item-role"]}>
@@ -122,7 +121,7 @@ const Members = () => {
           </Link>
         </div>
         <div className={styles["list-container"]}>
-          <Link href="/membres/antoine">
+          <Link href="/membres/antoine" legacyBehavior>
             <div className={styles["item-container"]}>
               <div className={styles["item-name"]}>
                 Antoine Mermet / &nbsp;{" "}
@@ -132,7 +131,6 @@ const Members = () => {
           </Link>
         </div>
       </main>
-      {/* <P4Banner /> */}
     </div>
   );
 };
