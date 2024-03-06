@@ -33,15 +33,14 @@ const Door = () => {
             <strong> Marseille – Août 2021</strong>
             <br />
             <iframe
-              width="510"
+              width="100%"
               height="315"
               src="https://www.youtube.com/embed/J0eeaM7c6kg"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
-            {/* TODO */}
             <br />
             <div>
               Une élue à la culture accueille le public venu voir la nouvelle

@@ -13,7 +13,6 @@ const Menu = () => {
       {!isMobile && <header className="header"></header>}
       <main className={styles.main}>
         <div className={styles["upper-section"]}>
-          {/*<P4Banner />*/}
           <h1 className={styles.h1}>
             <div className={styles.montserrat}>Collectif</div>
             <div className={styles.lato}>P4</div>

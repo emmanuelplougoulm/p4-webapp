@@ -42,7 +42,7 @@ const MaSoeur = ({ showData }) => {
               height="360"
               frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
             <br />
             Ma soeur, tes lèvres sont de porcelaine Première création immersive

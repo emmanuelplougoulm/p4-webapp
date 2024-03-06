@@ -34,11 +34,11 @@ const Tail = () => {
             <strong>Juillet 2020</strong> <br />
             <iframe
               src="https://player.vimeo.com/video/505564858?h=eabd48ad22"
-              width="510"
+              width="100%"
               height="360"
               frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
             <br />
             Invité en résidence pour le festival « ITINERAIRE BIS » de la

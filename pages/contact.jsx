@@ -7,7 +7,6 @@ const Contact = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
   return (
     <div className={"site-wrapper"}>
-      <P4Banner />
       <main className={styles.main}>
         {!isMobile && (
           <>
@@ -19,12 +18,20 @@ const Contact = () => {
                   associationp4@gmail.com
                 </a>
               </div>
+              <div className={styles.fat}> instagram </div>
+              <div className={styles.link}>
+                <a href="https://www.instagram.com/collectifp4/">
+                  {" "}
+                  https://www.instagram.com/collectifp4/
+                </a>
+              </div>
             </div>
             <div className={styles.right}>
               <div className={styles.fat}> téléphone </div>
               <div>
                 {" "}
-                06 99 90 04 74&nbsp;<strong>/</strong> &nbsp;07 69 18 94 49
+                Arthur Viadieu 06 99 90 04 74&nbsp;<strong>/</strong> Bob
+                Levasseur &nbsp;07 69 18 94 49
               </div>
             </div>
           </>
@@ -39,17 +46,24 @@ const Contact = () => {
                   associationp4@gmail.com
                 </a>
               </div>
+              <div className={styles.fat}> email </div>
+              <div className={styles.link}>
+                <a href="https://www.instagram.com/collectifp4/">
+                  {" "}
+                  https://www.instagram.com/collectifp4/
+                </a>
+              </div>
             </div>
             <div className={styles.bottom}>
               <div className={styles.fat}> téléphone </div>
               <div>
-                06 99 90 04 74&nbsp;<strong>/</strong> &nbsp;07 69 18 94 49
+                Arthur Viadieu 06 99 90 04 74&nbsp;<strong>/</strong> Bob
+                Levasseur &nbsp;07 69 18 94 49
               </div>
             </div>
           </div>
         )}
       </main>
-      <P4Banner />
     </div>
   );
 };

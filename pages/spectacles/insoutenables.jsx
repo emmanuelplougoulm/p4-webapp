@@ -12,7 +12,6 @@ const Insoutenables = () => {
   return (
     <div className={"site-wrapper"}>
       <div>
-        <P4Banner speed={3} />
         <div className="backlink-ctn">
           <Link href="/spectacles/spectacles" className="backlink">
             {"< SPECTACLES"}
@@ -47,9 +46,7 @@ const Insoutenables = () => {
           <img src={"/images/insoutenables.png"} alt="-" />
         </div>{" "}
       </div>
-      <div>
-        <P4Banner speed={6} />
-      </div>
+      <div></div>
     </div>
   );
 };

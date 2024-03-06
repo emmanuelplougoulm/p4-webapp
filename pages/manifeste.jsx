@@ -24,6 +24,14 @@ const Manifeste = () => {
       <br />
       <br />
       A.Vittez
+      <br />
+      <br />
+      <br />
+      <br />
+      <div>
+        Crédit photos: Avril Dunoyer <br />
+        <a href="https://www.instagram.com/avrildunoyer/">Instagram</a>
+      </div>
     </div>
   );
 };
