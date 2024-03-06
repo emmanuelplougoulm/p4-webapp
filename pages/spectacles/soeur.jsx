@@ -40,7 +40,7 @@ const MaSoeur = ({ showData }) => {
               src="https://player.vimeo.com/video/509780969?h=af17331d10"
               width="510"
               height="360"
-              frameborder="0"
+              frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
             ></iframe>

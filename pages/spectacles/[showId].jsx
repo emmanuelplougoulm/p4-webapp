@@ -77,7 +77,7 @@ const Spectacle = ({ showData }) => {
             {show && show.title.includes("CASTOR") && (
               <iframe
                 src="https://player.vimeo.com/video/505564858"
-                frameborder="0"
+                frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen
               ></iframe>
@@ -86,7 +86,7 @@ const Spectacle = ({ showData }) => {
               <iframe
                 title="vimeo-player"
                 src="https://player.vimeo.com/video/509780969"
-                frameborder="0"
+                frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen
               ></iframe>

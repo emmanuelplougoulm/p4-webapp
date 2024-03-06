@@ -1,4 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap");
+
+.marqueeCtn {
+  height: 90px;
+  overflow: hidden;
+  line-height: 30px;
+  position: relative;
+  display: none;
+  border: 1px red solid;
+
+  .marquee {
+    top: 0;
+    left: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+  }
+
+  .marquee2 {
+    animation-delay: 15s;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
 .container {
   flex-direction: row;
   align-items: center;

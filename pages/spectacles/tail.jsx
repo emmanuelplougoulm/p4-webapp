@@ -36,7 +36,7 @@ const Tail = () => {
               src="https://player.vimeo.com/video/505564858?h=eabd48ad22"
               width="100%"
               height="360"
-              frameborder="0"
+              frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
             ></iframe>

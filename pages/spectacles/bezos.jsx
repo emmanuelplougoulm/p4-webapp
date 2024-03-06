@@ -42,7 +42,7 @@ const Bezos = ({ showData }) => {
               height="315"
               src="https://www.youtube.com/embed/MPLQDtOdZZ8?si=xBH-ZXMTi45olKR3"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
