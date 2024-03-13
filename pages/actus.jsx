@@ -35,19 +35,19 @@ const Actus = () => {
             <div className={styles["title"]}>
               J'aurais voulu être Jeff Bezos
             </div>
+            <div className={styles["detail"]}> Avignon 2024</div>
             <div className={styles["detail"]}>
               {" "}
-              Avignon 2024 - Le 11 Juin 2024
+              Le 11 Juin 2024 - Théâtre de l'oeuvre Marseille
             </div>
             <div className={styles["detail"]}>
               {" "}
-              Théâtre de l'oeuvre Marseille 25 mai 2024{" "}
+              25 mai 2024: Festival de Coye-la-forêt
             </div>
             <div className={styles["detail"]}>
               {" "}
-              Festival de Coye-la-forêt Février et Octobre 2023
+              Février et Octobre 2023 : Théâtre de Belleville
             </div>
-            <div className={styles["detail"]}> Théâtre de Belleville</div>
           </div>
           <div className={styles["post-container"]}>
             <div className={styles["title"]}>Création in situ & immersive</div>
