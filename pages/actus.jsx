@@ -35,10 +35,10 @@ const Actus = () => {
             <div className={styles["title"]}>
               J'aurais voulu être Jeff Bezos
             </div>
-            <div className={styles["detail"]}> Avignon 2024</div>
+            <div className={styles["detail"]}> Avignon 2024: Théâtre le 11</div>
             <div className={styles["detail"]}>
               {" "}
-              Le 11 Juin 2024 - Théâtre de l'oeuvre Marseille
+              Juin 2024 - Théâtre de l'oeuvre Marseille
             </div>
             <div className={styles["detail"]}>
               {" "}
