@@ -9,21 +9,16 @@
   justify-content: space-between;
   .upper-section {
     display: flex;
-    // display: -webkit-flex;
-    // display: -webkit-box;
-    // display: -moz-flex;
-    // display: -moz-box;
-    // display: -ms-flexbox;
     flex-direction: column;
     flex: 1 1 auto;
     .h1 {
       font-size: 16px;
-      // flex-grow: 1;
+      
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      // margin: 40px;
+      
       font-family: "Montserrat";
       font-weight: 100;
       text-transform: uppercase;
@@ -70,12 +65,8 @@
       position: relative;
       overflow: hidden;
       object-fit: cover;
-      // img {
-      //   width: 100%;
-      //   height: 100%;
-      //   object-fit: cover;
-      //   overflow: hidden;
-      // }
+      display: flex;
+      
     }
     .nav-wrapper {
       display: flex;

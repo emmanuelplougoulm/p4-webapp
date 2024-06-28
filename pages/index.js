@@ -1,10 +1,7 @@
 import React from "react";
 import styles from "../styles/menu.module.scss";
 import Link from "next/link";
-import P4Banner from "../components/P4Banner/P4Banner.jsx";
-import FunnyBanner from "../components//FunnyBanner/FunnyBanner.jsx";
 import { useMediaQuery } from "react-responsive";
-import Image from "next/legacy/image";
 
 const Menu = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
@@ -27,7 +24,11 @@ const Menu = () => {
         </div>
         <section className={styles["section"]}>
           <div className={styles["img-container"]}>
-            <img src="/images/photos/image5.jpeg" />
+            <div>
+              
+              <img src="/images/photos/image5.jpeg" /></div>
+            <img src="/images/photos/bezos-avignon.webp" />
+            
           </div>
           <div className={styles["nav-wrapper"]}>
             <Link className={styles["nav-item"]} href="/manifeste">
@@ -44,6 +45,9 @@ const Menu = () => {
             </Link>
             <Link className={styles["nav-item"]} href="/contact">
               Contact
+            </Link>
+            <Link className={styles["nav-item"]} href="https://11avignon.mapado.com/event/349219-jaurais-voulu-etre-jeff-bezos">
+              * La billeterie pour Avignon c'est par ici ! 
             </Link>
           </div>
         </section>
