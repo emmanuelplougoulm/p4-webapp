@@ -24,13 +24,12 @@ const Menu = () => {
         </div>
         <section className={styles["section"]}>
           <div className={styles["img-container"]}>
-            <div>
-              
-              <img src="/images/photos/image5.jpeg" /></div>
             <img src="/images/photos/bezos-avignon.webp" />
-            
           </div>
           <div className={styles["nav-wrapper"]}>
+          <Link className={styles["nav-item"]} href="https://11avignon.mapado.com/event/349219-jaurais-voulu-etre-jeff-bezos">
+              * La billeterie pour Avignon c'est par ici ! 
+            </Link>
             <Link className={styles["nav-item"]} href="/manifeste">
               Manifeste
             </Link>
@@ -46,9 +45,7 @@ const Menu = () => {
             <Link className={styles["nav-item"]} href="/contact">
               Contact
             </Link>
-            <Link className={styles["nav-item"]} href="https://11avignon.mapado.com/event/349219-jaurais-voulu-etre-jeff-bezos">
-              * La billeterie pour Avignon c'est par ici ! 
-            </Link>
+            
           </div>
         </section>
       </main>

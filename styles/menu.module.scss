@@ -64,9 +64,10 @@
       width: 50%;
       position: relative;
       overflow: hidden;
-      object-fit: cover;
-      display: flex;
-      
+      object-fit: fill;
+     img{
+      width: 100%;
+     } 
     }
     .nav-wrapper {
       display: flex;
